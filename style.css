@@ -1,20 +1,69 @@
 @font-face {
-    font-family: 'Barlow-Medium'; /* Укажите название шрифта */
-    src: url('./fonts/Barlow-Medium.otf') format('opentype');
-    font-weight: normal; /* Соответствие начертанию */
+    font-family: 'TTLakes-Light'; /* Укажите название шрифта */
+    src: url('./assets/fonts/TTLakes/TTLakes-Light.woff') format('opentype');
+    font-weight: light; /* Соответствие начертанию */
+    font-style: light;
+}
+
+@font-face {
+    font-family: 'TTLakes-DemiBold';
+    src: url('./assets/fonts/TTLakes/TTLakes-DemiBold.woff') format('opentype');
+    font-weight: bold;
+    font-style: bold;
+}
+
+@font-face {
+    font-family: 'TTLakes-Regular';
+    src: url('./assets/fonts/TTLakes/TTLakes-Regular.woff') format('opentype');
+    font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'Barlow-Bold';
-    src: url('./fonts/Barlow-Bold.otf') format('opentype');
-    font-weight: bold; /* Жирное начертание */
-    font-style: normal;
+    font-family: 'TTLakes-Medium';
+    src: url('./assets/fonts/TTLakes/TTLakes-Medium.woff') format('opentype');
+    font-weight: medium;
+    font-style: medium;
 }
 
-.divide-screen {
+body {
+    max-width: 1120px;
+    min-height: 535px;
+    background-color: var(--main-background);
+}
+
+:root {
+    --main-background: #F8F8F8;
+    --carousel-background: #FFFFFF;
+    --baclground-icons: #FF3E79;
+    --black-text: #000000;
+    --carousel-text: #B8FFEC;
+    --main_items: #1B1C21;
+    --second-text: #7E7E82;
+    --second-line: #41F6D7;
+    --actions__divided: #EAEAEA;
+}
+
+header {
+    font-family: 'TTLakes-DemiBold', Arial, sans-serif;
+    font-size: 2em;
+}
+
+p {
+    font-family: 'TTLakes-Regular', Arial, sans-serif;
+}
+
+.main__text {
+    color: var(--second-text);
+    line-height: 25px;
+    font-size: 15px;
+    width: 560px;
+    height: 268px;
+}
+
+/* .divide-screen {
     display: grid;
-        grid-template-columns: 1fr 1fr; /* Две равные колонки */
+        grid-template-columns: 1fr 1fr; /* Две равные колонки 
         height: 1000px;
         width: 1100px;
 }
@@ -22,14 +71,14 @@
 .image-container {
     width: 100%;
     height: 80%;
-    overflow: hidden; /* Посмотреть, на что влияет */
+    overflow: hidden; /* Посмотреть, на что влияет 
     position: relative;
 }
 
 .image-container img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Посмотреть, на что влияет */
+    object-fit: cover; /* Посмотреть, на что влияет 
 }
 
 .logo {
@@ -75,7 +124,7 @@ p {
     flex: 1;
     height: 1px;
     background: #ddd;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Тень для линий */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Тень для линий 
 }
 
 .separator-text {
@@ -83,13 +132,13 @@ p {
     color: #666;
     font-family: 'Barlow-Medium', Arial, sans-serif;
     font-size: 14px;
-    background: white; /* Чтобы текст перекрывал линию */
+    background: white; /* Чтобы текст перекрывал линию 
     z-index: 1;
 }
 
 .buttons {
     display: grid;
-        grid-template-columns: 1fr 1fr; /* Две равные колонки */
+        grid-template-columns: 1fr 1fr; /* Две равные колонки 
         height: 30px;
         width: 50px;
         margin-top: 50px;
@@ -136,27 +185,27 @@ p {
     width: 450px;
 }
   
-  /* Обёртка */
+  /* Обёртка 
 .input-wrapper {
     position: relative;
 }
   
-  /* Сам label */
+  /* Сам label 
 .input-label-inside {
     display: flex;
     flex-direction: column;
     border: 1px solid #ddd;
-    /* border-left: 1px solid #0076B6; */
+    /* border-left: 1px solid #0076B6; 
     border-radius: 2px;
     padding: 4px 10px 6px;
     font-size: 12px;
-    color: #6c757d; /* как в примере */
+    color: #6c757d; /* как в примере 
     height: 50px;
     justify-content: flex-start;
     margin-bottom: 50px;
 }
   
-  /* input без отдельной рамки */
+  /* input без отдельной рамки 
 .input-field {
     border: none;
     outline: none;
@@ -231,3 +280,4 @@ p {
     border-radius: 2px;
     cursor: pointer;
 }
+*/
