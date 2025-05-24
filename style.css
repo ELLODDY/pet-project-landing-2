@@ -133,8 +133,18 @@ header {
         margin-right: 30px;
         max-width: 1120px;
         right: 20px;
-        height: 100%;
+        height: 30px;
         justify-content: space-between;
+}
+
+.pages__names span {
+    padding: 4px 8px;
+    cursor: pointer;
+}
+
+.pages__names span:hover {
+    outline: 1px solid #41F6D7;
+    border-radius: 5px;
 }
 
 .new__string {
@@ -145,8 +155,17 @@ header {
         top: 90px;
         left: 20px;
         max-width: 1120px;
-        width: 100%; /* важно для работы space-between */
-        height: 100%;
+        width: 60px; /* важно для работы space-between */
+        height: 30px;
+        justify-content: center;
+        align-items: center;
+    padding: 1px 4px;
+    cursor: pointer;
+}
+
+.new__string:hover {
+    outline: 1px solid #41F6D7;
+    border-radius: 5px;
 }
 
 p {
@@ -174,7 +193,7 @@ img {
 .main__text--photo {
     display: flex;
     position: relative;
-        top: 70px;
+        top: 80px;
         left: 10px;
 }
 
