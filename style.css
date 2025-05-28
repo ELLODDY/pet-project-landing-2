@@ -155,7 +155,7 @@ header {
         top: 90px;
         left: 20px;
         max-width: 1120px;
-        width: 60px; /* важно для работы space-between */
+        width: 60px;
         height: 30px;
         justify-content: center;
         align-items: center;
@@ -216,6 +216,342 @@ img {
     color: var(--black-text);
     margin-left: 30px;
     margin-top: -5px;
+}
+
+.buttons__background {
+    background-color: var(--actions__divided);
+    width: 1120px;
+    height: 180px;
+    display: flex;
+        position: relative;
+        top: 120px;
+        left: -5px;
+}
+
+.brands__basic__text {
+    font-family: 'TTLakes-Light', Arial, sans-serif;
+    display: inline-flex;
+        position: absolute;
+        top: 420px;
+        font-size: 12px;
+}
+
+.lenovo__button {
+    max-width: 1120px;
+    height: 30px;
+    background-color: var(--carousel-background);
+    display: flex;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        width: 110px;
+        gap: 30px;
+}
+
+.lenovo {
+    width: 50px;
+    height: 30px;
+    top: 0px;
+    display: flex;
+        justify-content: center;
+        left: 10px;
+}
+
+.action {
+    width: 20px;
+    height: 30px;
+    top: 0px;
+    display: flex;
+        justify-content: flex-end;
+        right: 0px;
+}
+
+.samsung__button {
+    max-width: 1120px;
+    height: 30px;
+    background-color: var(--carousel-background);
+    display: flex;
+        position: absolute;
+        top: 10px;
+        left: 150px;
+        width: 110px;
+        gap: 30px;
+}
+
+.samsung {
+    width: 50px;
+    height: 30px;
+    top: 0px;
+    display: flex;
+        justify-content: center;
+        left: 10px;
+}
+
+.apple__button {
+    max-width: 1120px;
+    height: 30px;
+    background-color: var(--carousel-background);
+    display: flex;
+        position: absolute;
+        top: 10px;
+        left: 290px;
+        width: 110px;
+        gap: 30px;
+}
+
+.apple {
+    width: 50px;
+    height: 30px;
+    top: 0px;
+    display: flex;
+        justify-content: center;
+        left: 0px;
+}
+
+.viewsonic__button {
+    max-width: 1120px;
+    height: 30px;
+    background-color: var(--carousel-background);
+    display: flex;
+        position: absolute;
+        top: 10px;
+        left: 430px;
+        width: 110px;
+        gap: 30px;
+}
+
+.viewsonic {
+    width: 50px;
+    height: 30px;
+    top: 0px;
+    display: flex;
+        justify-content: center;
+        left: 10px;
+}
+
+.bosch__button {
+    max-width: 1120px;
+    height: 30px;
+    background-color: var(--carousel-background);
+    display: flex;
+        position: absolute;
+        top: 50px;
+        left: 10px;
+        width: 110px;
+        gap: 30px;
+}
+
+.bosch {
+    width: 50px;
+    height: 30px;
+    top: 0px;
+    display: flex;
+        justify-content: center;
+        left: 10px;
+}
+
+.hp__button {
+    max-width: 1120px;
+    height: 30px;
+    background-color: var(--carousel-background);
+    display: flex;
+        position: absolute;
+        top: 50px;
+        left: 150px;
+        width: 110px;
+        gap: 30px;
+}
+
+.hp {
+    width: 50px;
+    height: 30px;
+    top: 0px;
+    display: flex;
+        justify-content: center;
+        left: 10px;
+}
+
+.acer__button {
+    max-width: 1120px;
+    height: 30px;
+    background-color: var(--carousel-background);
+    display: flex;
+        position: absolute;
+        top: 50px;
+        left: 290px;
+        width: 110px;
+        gap: 30px;
+}
+
+.acer {
+    width: 50px;
+    height: 30px;
+    top: 0px;
+    display: flex;
+        justify-content: center;
+        left: 10px;
+}
+
+.sony__button {
+    max-width: 1120px;
+    height: 30px;
+    background-color: var(--carousel-background);
+    display: flex;
+        position: absolute;
+        top: 50px;
+        left: 430px;
+        width: 110px;
+        gap: 30px;
+}
+
+.sony {
+    width: 50px;
+    height: 30px;
+    top: 0px;
+    display: flex;
+        justify-content: center;
+        left: 10px;
+}
+
+.lenovo__button__2 {
+    max-width: 1120px;
+    height: 30px;
+    background-color: var(--carousel-background);
+    display: flex;
+        position: absolute;
+        top: 0px;
+        left: 10px;
+        width: 110px;
+        gap: 30px;
+}
+
+.lenovo__2 {
+    width: 50px;
+    height: 30px;
+    top: 0px;
+    display: flex;
+        justify-content: center;
+        left: 10px;
+}
+
+.samsung__button__2 {
+    max-width: 1120px;
+    height: 30px;
+    background-color: var(--carousel-background);
+    display: flex;
+        position: absolute;
+        top: 0px;
+        left: 150px;
+        width: 110px;
+        gap: 30px;
+}
+
+.samsung__2 {
+    width: 50px;
+    height: 30px;
+    top: 0px;
+    display: flex;
+        justify-content: center;
+        left: 10px;
+}
+
+.apple__button__2 {
+    max-width: 1120px;
+    height: 30px;
+    background-color: var(--carousel-background);
+    display: flex;
+        position: absolute;
+        top: 0px;
+        left: 290px;
+        width: 110px;
+        gap: 30px;
+}
+
+.apple__2 {
+    width: 50px;
+    height: 30px;
+    top: 0px;
+    display: flex;
+        justify-content: center;
+        left: 0px;
+}
+
+.hidden { /* дивы с брендами */
+    width: 400px;
+    height: 40px;
+    display: flex;
+        position: absolute;
+        top: 90px;
+}
+
+.statusHidden { /* класс, вызываемый в js, убирает дивы с брендами */
+    display: none;
+}
+
+.showAll__visible {
+    font-family: 'TTLakes-Light', Arial, sans-serif;
+    display: inline-flex;
+        position: absolute;
+        font-size: 12px;
+        left: 20px;
+}
+
+.showAll__button__hidden {
+    display: none;
+}
+
+.showAll__button__visible {
+    width: 100px;
+    height: 30px;
+    cursor: pointer;
+    display: flex;
+        position: absolute;
+        top: 90px;
+        font-size: 12px;
+        left: 10px;
+}
+
+.hide__button {
+    width: 90px;
+    height: 30px;
+    cursor: pointer;
+    display: flex;
+        position: relative;
+        top: 120px;
+        font-size: 12px;
+}
+
+.hide {
+    font-family: 'TTLakes-Light', Arial, sans-serif;
+    display: inline-flex;
+        position: absolute;
+        top: 10px;
+        font-size: 12px;
+        left: 35px;
+}
+
+.hideButtonHidden {
+    display: none;
+}
+
+.arrow__hide__visible {
+    display: flex;
+        position: absolute;
+        justify-content: center;
+        width: 20px;
+        height: 20px;
+        top: 8px;
+        left: 10px;
+}
+
+.arrow__expand__visible {
+    display: flex;
+        position: absolute;
+        justify-content: center;
+        width: 20px;
+        height: 20px;
+        top: -2px;
+        left: 0px;
 }
 
 /* .divide-screen {
