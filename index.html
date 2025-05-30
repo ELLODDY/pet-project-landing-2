@@ -4,23 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="reset_css.css" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
-   
 </head>
+
 <body>
     <header>
-      <div class="line"><img src="assets/img/light.svg"></div>
-      <div class="title">Услуги и сервисы</div>
-      <div class="icons">
-        <span class="query">Оставить заявку</span>
-          <div class="icon__circle">
-            <img src="assets/img/settings.svg">
-          </div>
-        <span class="status">Статус ремонта</span>
-          <div class="icon__circle2">
-            <img src="assets/img/some.svg">
-          </div>
+      <div style="display: flex; justify-content: space-between;">
+      <div style="position: relative;">
+        <div style="position: absolute; height: 30px; left: -10px;">
+          <img src="assets/img/light.svg">
+        </div>
+        <div>Услуги и сервисы</div>
       </div>
+      
+      <div class="icons__top">
+        
+        <div style="display: flex; align-items: center; gap: 5px;">
+          <span class="query">Оставить заявку</span>
+          <div class="icon__circle">
+            <img style="height: 15px;" src="assets/img/settings.svg">
+          </div>
+        </div>
+        
+        <div style="display: flex; align-items: center; gap: 5px;">
+          <span class="status">Статус ремонта</span>
+          <div class="icon__circle2">
+            <img style="height: 15px;" src="assets/img/some.svg">
+          </div>
+        </div>
+
+      </div>
+    </div>
+
       <div class="pages__names">
         <span>Ремонтируемые бренды</span>
         <span>Ремонтируемые устройства</span>
@@ -28,175 +44,112 @@
         <span>Адреса сервисных центров</span>
         <span>Специальные цены</span>
       </div>
+
       <span class="new__string">Отзывы</span>
+
     </header>
-    <main>
-      <div class="main__text--photo">
+
+<main>
+  <div style="display: flex; justify-content: space-around;">
       <div class="main__text">
           <p>Мы являемся авторизованным сервисным центром по ремонту техники Dell.
           Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя.</p>
-          <p>Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает большое количество постоянных клиентов.
+          <p style="margin-top: 10px;">Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает большое количество постоянных клиентов.
           Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.</p>
-          <div class="arrow"><img src="assets/img/arrow.svg"></div>
-          <p class="read__further">Читать далее</p>
+
+          <div style="display: flex; justify-content: flex-start; gap: 10px; margin-top: 15px; cursor: pointer;">
+            <div><img src="assets/img/arrow.svg"></div>
+            <p class="read__further">Читать далее</p>
+          </div>
+
       </div>
-      <img src="assets/img/main_img.png">
+
+      <div>
+        <img src="assets/img/main_img.png">
       </div>
 
-      <span class="brands__basic__text">РЕМОНТ ТЕХНИКИ РАЗЛИЧНЫХ БРЕНДОВ</span>
-      
-      <div class="buttons__background">
-        <div>
+  </div>
+
+  <span class="brands__basic__text">РЕМОНТ ТЕХНИКИ РАЗЛИЧНЫХ БРЕНДОВ</span>
+    <div class="buttons__background">
+    <div style="display: flex; justify-content: flex-start; padding: 10px; margin-top: 10px; align-items: center; gap: 20px;">
           
-            <div class="lenovo__button">
-              <img src="assets 2/img/lenovo.svg" class="lenovo">
-              <img src="assets 2/img/action.svg" class="action">
-            </div>
+      <div class="brandsCard">
+        <img src="assets 2/img/lenovo.svg" class="lenovo">
+        <img src="assets 2/img/action.svg" class="action">
+      </div>
 
-            <div class="samsung__button">
-              <img src="assets 2/img/samsung.svg" class="samsung">
-              <img src="assets 2/img/action.svg" class="action">
-            </div>
+      <div class="brandsCard">
+        <img src="assets 2/img/samsung.svg" class="samsung">
+        <img src="assets 2/img/action.svg" class="action">
+      </div>
 
-            <div class="apple__button">
-              <img src="assets 2/img/apple.svg" class="apple">
-              <img src="assets 2/img/action.svg" class="action">
-            </div>
+      <div class="brandsCard">
+        <img src="assets 2/img/apple.svg" class="apple">
+        <img src="assets 2/img/action.svg" class="action">
+      </div>
 
-            <div class="viewsonic__button">
-              <img src="assets 2/img/viewsonic.svg" class="viewsonic">
-              <img src="assets 2/img/action.svg" class="action">
-            </div>
+      <div class="brandsCard">
+        <img src="assets 2/img/viewsonic.svg" class="viewsonic">
+        <img src="assets 2/img/action.svg" class="action">
+      </div>
+    </div>
 
-            <div class="bosch__button">
-              <img src="assets 2/img/bosch.svg" class="bosch">
-              <img src="assets 2/img/action.svg" class="action">
-            </div>
+    <div style="display: flex; justify-content: flex-start; padding: 10px; align-items: center; gap: 20px;">
+      <div class="brandsCard">
+        <img src="assets 2/img/bosch.svg" class="bosch">
+        <img src="assets 2/img/action.svg" class="action">
+      </div>
 
-            <div class="hp__button">
-              <img src="assets 2/img/hp.svg" class="hp">
-              <img src="assets 2/img/action.svg" class="action">
-            </div>
+      <div class="brandsCard">
+        <img src="assets 2/img/hp.svg" class="hp">
+        <img src="assets 2/img/action.svg" class="action">
+      </div>
 
-             <div class="acer__button">
-              <img src="assets 2/img/acer.svg" class="acer">
-              <img src="assets 2/img/action.svg" class="action">
-            </div>
+        <div class="brandsCard">
+        <img src="assets 2/img/acer.svg" class="acer">
+        <img src="assets 2/img/action.svg" class="action">
+      </div>
 
-             <div class="sony__button">
-              <img src="assets 2/img/sony.svg" class="sony">
-              <img src="assets 2/img/action.svg" class="action">
-            </div>
+        <div class="brandsCard">
+        <img src="assets 2/img/sony.svg" class="sony">
+        <img src="assets 2/img/action.svg" class="action">
+      </div>
+    </div>
 
-            <div class="hidden">
-              <div class="lenovo__button__2">
-                <img src="assets 2/img/lenovo.svg" class="lenovo__2">
-                <img src="assets 2/img/action.svg" class="action">
-              </div>
-
-              <div class="samsung__button__2">
-                <img src="assets 2/img/samsung.svg" class="samsung__2">
-                <img src="assets 2/img/action.svg" class="action">
-              </div>
-
-              <div class="apple__button__2">
-                <img src="assets 2/img/apple.svg" class="apple__2">
-                <img src="assets 2/img/action.svg" class="action">
-              </div>
-            </div>
-
+      <div class="hidden">
+        <div class="brandsCard">
+          <img src="assets 2/img/lenovo.svg" class="lenovo__2">
+          <img src="assets 2/img/action.svg" class="action">
         </div>
-        
-        <div class="hide__button">
-          <span class="hide">Скрыть</span>
-          <img src="assets 2/img/arrow-hide.svg" class="arrow__hide__visible">
+
+        <div class="brandsCard">
+          <img src="assets 2/img/samsung.svg" class="samsung__2">
+          <img src="assets 2/img/action.svg" class="action">
         </div>
-          
-        <div class="showAll__button__hidden">
-            <span class="showAll__visible">Показать все</span>
+
+        <div class="brandsCard">
+          <img src="assets 2/img/apple.svg" class="apple__2">
+          <img src="assets 2/img/action.svg" class="action">
+        </div>
+      </div>
+
+      <div class="hide__button">
+            <img src="assets 2/img/arrow-hide.svg" class="arrow__hide__visible">
+            <span class="hide">Скрыть</span>
+      </div>
+
+      <div class="showAll__button__hidden">
             <img src="assets 2/img/arrow-expand.svg" class="arrow__expand__visible">
-        </div>
-      
+            <span class="showAll__visible">Показать все</span>
       </div>
-    
-    </main>
+
+      </div>
+
+    </div>
+
+</main>
 </body>
 <script defer src="main.js"></script>
 </html>
 
-<!-- <div class="divide-screen">
-        
-        <div class="image-container">
-            <img src="img/bg.jpg">
-            <div class="logo"><img src="img/logo.svg" width="20" height="20"></div>            
-        </div>
-        
-        <div class="text">
-            <h1>Get iintoo it today</h1>
-                 <p>There is no charge or obligation upon registration.</p>
-                 <div class="buttons">
-                    <div><button class="Facebook">Register with Facebook</button></div>
-                    <div><button class="LinkedIn">Register with LinkedIn</button></div>
-                </div>
-                
-                <div class="separator">
-                    <span class="separator-text">OR</span>
-                </div>
-                
-                <div class="form-container">
-                    <div class="input-wrapper">
-                      <label class="input-label-inside">
-                        Email
-                        <input type="email" name="email" class="input-field" />
-                      </label>
-                    </div>
-                  
-                    <div class="input-wrapper">
-                      <label class="input-label-inside">
-                        Phone
-                        <input type="tel" name="phone" class="input-field" />
-                      </label>
-                    </div>
-                  </div>
-                
-            <h1>What type of investor are you?</h1>
-                  <p>Select the type of investor you are below</p>
-                  
-                  <div class="radio-group">
-                    <label class="radio-option">
-                      <input type="radio" name="investorType" value="individual" checked />
-                      Individual
-                      <span class="tooltip-container">
-                        ⓘ
-                        <span class="tooltip-text">
-                          I am a natural person investing on my own behalf as a sole owner, joint tenant, or tenant in common.
-                        </span>
-                      </span>
-                    </label>
-                
-                    <label class="radio-option">
-                      <input type="radio" name="investorType" value="business" />
-                      Business
-                    </label>
-                
-                    <label class="radio-option">
-                      <input type="radio" name="investorType" value="ira" />
-                      IRA
-                    </label>
-                
-                    <label class="radio-option">
-                      <input type="radio" name="investorType" value="trust" />
-                      Trust
-                    </label>
-                  </div>
-                  
-                  <label class="checkbox-label">
-                    <input type="checkbox" class="custom-checkbox" />
-                    I agree to the terms and receiving notifications from iintoo
-                    <a href="#" class="terms-link">View full terms</a>
-                  </label>
-                  
-                 <div><button class="Account">Create Account</button></div>
-
-            </div>
-    </div> -->

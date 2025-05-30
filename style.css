@@ -1,3 +1,4 @@
+
 @font-face {
     font-family: 'TTLakes-Light'; /* Укажите название шрифта */
     src: url('./assets/fonts/TTLakes/TTLakes-Light.woff') format('opentype');
@@ -48,93 +49,55 @@ body {
 header {
     font-family: 'TTLakes-DemiBold', Arial, sans-serif;
     font-size: 2em;
-    display: flex;
-        position: relative;
-        left: 0;
-        top: 10px;
+    margin: 10px;
 }
 
-.line img {
-    width: 5px;
-    height: 50px;
-    left: -10px;
-    right: 0;
-    top: 0;
-}
-
-.title {
-    left: 10px;
-}
-
-.icons {
+.icons__top {
     font-family: 'TTLakes-Medium', Arial, sans-serif;
     font-size: 14px;
-    height: 30px;
     display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        position: absolute;
-        right: 20px;
-        top: 10px;
-        gap: 80px;
-}
-
-.status {
-    display: flex;
-        position: relative;
-        right: 35px;
+        align-items: flex-end;
+        flex-direction: row;
+        gap: 10px;
+        cursor: pointer;
 }
 
 .icon__circle {
     width: 30px;
     height: 30px;
-    background-color: #FF2E63; /* розовый цвет */
+    background-color: #FF2E63;
     border-radius: 50%;
     display: flex;
         align-items: center;
         justify-content: center;
-        position: absolute;
-        top: 0;
-        right: 150px;
 }
 
 .icon__circle img {
     width: 15px;
     height: 15px;
-    top: 1px;
 }
 
 .icon__circle2 {
     width: 30px;
     height: 30px;
-    background-color: #FF2E63; /* розовый цвет */
+    background-color: #FF2E63;
     border-radius: 50%;
     display: flex;
         align-items: center;
         justify-content: center;
-        position: absolute;
-        top: 0;
-        right: 0;
 }
 
 .icon__circle2 img {
     width: 15px;
     height: 15px;
-    top: 1px;
 }
 
 .pages__names {
     font-family: 'TTLakes-Light', Arial, sans-serif;
     font-size: 15px;
     display: flex;
-        position: absolute;
-        top: 50px;
-        left: 20px;
-        margin-right: 30px;
-        max-width: 1120px;
-        right: 20px;
-        height: 30px;
-        justify-content: space-between;
+    justify-content: space-around;
+    margin: 20px;
 }
 
 .pages__names span {
@@ -150,15 +113,12 @@ header {
 .new__string {
     font-family: 'TTLakes-Light', Arial, sans-serif;
     font-size: 15px;
+    width: 60px;
+    height: 20px;
     display: flex;
-        position: absolute;
-        top: 90px;
-        left: 20px;
-        max-width: 1120px;
-        width: 60px;
-        height: 30px;
-        justify-content: center;
-        align-items: center;
+    justify-content: center;
+    align-items: center;
+    margin-left: 40px;
     padding: 1px 4px;
     cursor: pointer;
 }
@@ -168,332 +128,70 @@ header {
     border-radius: 5px;
 }
 
-p {
-    font-family: 'TTLakes-Regular', Arial, sans-serif;
-}
-
 .main__text {
+    font-family: 'TTLakes-Regular', Arial, sans-serif;
     color: var(--second-text);
     line-height: 25px;
     font-size: 15px;
-    width: 560px;
-    height: 268px;
-    margin-left: 5px;
-}
-
-img {
-    display: flex;
-    justify-content: flex-end;
-        position: relative;
-        width: 560px;
-        height: 268px;
-        top: 15px;
-}
-
-.main__text--photo {
-    display: flex;
-    position: relative;
-        top: 80px;
-        left: 10px;
-}
-
-.arrow {
-    display: flex;
-    position: absolute;
-}
-
-.arrow img {
-    width: 20px;
-    height: 15px;
-    left: 0;
-    right: 0;
-    top: 0;
+    padding: 20px;
+    padding-top: 0;
 }
 
 .read__further {
-    font-family: 'TTLakes-DemiBold', Arial, sans-serif;
+    font-family: 'TTLakes-Medium', Arial, sans-serif;
     font-size: 20px;
     color: var(--black-text);
-    margin-left: 30px;
-    margin-top: -5px;
+    cursor: pointer;
+}
+
+.brands__basic__text {
+    font-family: 'TTLakes-Light', Arial, sans-serif;
+    font-size: 15px;
+    padding: 20px;
 }
 
 .buttons__background {
     background-color: var(--actions__divided);
     width: 1120px;
-    height: 180px;
+    height: 300px;
+    z-index: 0
+}
+
+.brandsCard {
+    width: 200px;
+    height: auto;
     display: flex;
-        position: relative;
-        top: 120px;
-        left: -5px;
-}
-
-.brands__basic__text {
-    font-family: 'TTLakes-Light', Arial, sans-serif;
-    display: inline-flex;
-        position: absolute;
-        top: 420px;
-        font-size: 12px;
-}
-
-.lenovo__button {
-    max-width: 1120px;
-    height: 30px;
+    justify-content: space-between;
     background-color: var(--carousel-background);
-    display: flex;
-        position: absolute;
-        top: 10px;
-        left: 10px;
-        width: 110px;
-        gap: 30px;
+    padding: 10px;
 }
 
-.lenovo {
-    width: 50px;
-    height: 30px;
-    top: 0px;
+.hidden {
     display: flex;
-        justify-content: center;
-        left: 10px;
+    justify-content: flex-start;
+    padding: 10px;
+    align-items: center;
+    gap: 20px;
 }
 
-.action {
-    width: 20px;
-    height: 30px;
-    top: 0px;
-    display: flex;
-        justify-content: flex-end;
-        right: 0px;
-}
-
-.samsung__button {
-    max-width: 1120px;
-    height: 30px;
-    background-color: var(--carousel-background);
-    display: flex;
-        position: absolute;
-        top: 10px;
-        left: 150px;
-        width: 110px;
-        gap: 30px;
-}
-
-.samsung {
-    width: 50px;
-    height: 30px;
-    top: 0px;
-    display: flex;
-        justify-content: center;
-        left: 10px;
-}
-
-.apple__button {
-    max-width: 1120px;
-    height: 30px;
-    background-color: var(--carousel-background);
-    display: flex;
-        position: absolute;
-        top: 10px;
-        left: 290px;
-        width: 110px;
-        gap: 30px;
-}
-
-.apple {
-    width: 50px;
-    height: 30px;
-    top: 0px;
-    display: flex;
-        justify-content: center;
-        left: 0px;
-}
-
-.viewsonic__button {
-    max-width: 1120px;
-    height: 30px;
-    background-color: var(--carousel-background);
-    display: flex;
-        position: absolute;
-        top: 10px;
-        left: 430px;
-        width: 110px;
-        gap: 30px;
-}
-
-.viewsonic {
-    width: 50px;
-    height: 30px;
-    top: 0px;
-    display: flex;
-        justify-content: center;
-        left: 10px;
-}
-
-.bosch__button {
-    max-width: 1120px;
-    height: 30px;
-    background-color: var(--carousel-background);
-    display: flex;
-        position: absolute;
-        top: 50px;
-        left: 10px;
-        width: 110px;
-        gap: 30px;
-}
-
-.bosch {
-    width: 50px;
-    height: 30px;
-    top: 0px;
-    display: flex;
-        justify-content: center;
-        left: 10px;
-}
-
-.hp__button {
-    max-width: 1120px;
-    height: 30px;
-    background-color: var(--carousel-background);
-    display: flex;
-        position: absolute;
-        top: 50px;
-        left: 150px;
-        width: 110px;
-        gap: 30px;
-}
-
-.hp {
-    width: 50px;
-    height: 30px;
-    top: 0px;
-    display: flex;
-        justify-content: center;
-        left: 10px;
-}
-
-.acer__button {
-    max-width: 1120px;
-    height: 30px;
-    background-color: var(--carousel-background);
-    display: flex;
-        position: absolute;
-        top: 50px;
-        left: 290px;
-        width: 110px;
-        gap: 30px;
-}
-
-.acer {
-    width: 50px;
-    height: 30px;
-    top: 0px;
-    display: flex;
-        justify-content: center;
-        left: 10px;
-}
-
-.sony__button {
-    max-width: 1120px;
-    height: 30px;
-    background-color: var(--carousel-background);
-    display: flex;
-        position: absolute;
-        top: 50px;
-        left: 430px;
-        width: 110px;
-        gap: 30px;
-}
-
-.sony {
-    width: 50px;
-    height: 30px;
-    top: 0px;
-    display: flex;
-        justify-content: center;
-        left: 10px;
-}
-
-.lenovo__button__2 {
-    max-width: 1120px;
-    height: 30px;
-    background-color: var(--carousel-background);
-    display: flex;
-        position: absolute;
-        top: 0px;
-        left: 10px;
-        width: 110px;
-        gap: 30px;
-}
-
-.lenovo__2 {
-    width: 50px;
-    height: 30px;
-    top: 0px;
-    display: flex;
-        justify-content: center;
-        left: 10px;
-}
-
-.samsung__button__2 {
-    max-width: 1120px;
-    height: 30px;
-    background-color: var(--carousel-background);
-    display: flex;
-        position: absolute;
-        top: 0px;
-        left: 150px;
-        width: 110px;
-        gap: 30px;
-}
-
-.samsung__2 {
-    width: 50px;
-    height: 30px;
-    top: 0px;
-    display: flex;
-        justify-content: center;
-        left: 10px;
-}
-
-.apple__button__2 {
-    max-width: 1120px;
-    height: 30px;
-    background-color: var(--carousel-background);
-    display: flex;
-        position: absolute;
-        top: 0px;
-        left: 290px;
-        width: 110px;
-        gap: 30px;
-}
-
-.apple__2 {
-    width: 50px;
-    height: 30px;
-    top: 0px;
-    display: flex;
-        justify-content: center;
-        left: 0px;
-}
-
-.hidden { /* дивы с брендами */
-    width: 400px;
-    height: 40px;
-    display: flex;
-        position: absolute;
-        top: 90px;
-}
-
-.statusHidden { /* класс, вызываемый в js, убирает дивы с брендами */
+.brandsHiddenString { /* класс, вызываемый в js, убирает дивы с брендами */
     display: none;
 }
 
-.showAll__visible {
+.hide__button {
     font-family: 'TTLakes-Light', Arial, sans-serif;
-    display: inline-flex;
-        position: absolute;
-        font-size: 12px;
-        left: 20px;
+    font-size: 15px;
+    width: 70px;
+    height: 30px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.hideButtonHidden {
+    display: none;
 }
 
 .showAll__button__hidden {
@@ -501,276 +199,13 @@ img {
 }
 
 .showAll__button__visible {
-    width: 100px;
-    height: 30px;
-    cursor: pointer;
-    display: flex;
-        position: absolute;
-        top: 90px;
-        font-size: 12px;
-        left: 10px;
-}
-
-.hide__button {
-    width: 90px;
-    height: 30px;
-    cursor: pointer;
-    display: flex;
-        position: relative;
-        top: 120px;
-        font-size: 12px;
-}
-
-.hide {
     font-family: 'TTLakes-Light', Arial, sans-serif;
-    display: inline-flex;
-        position: absolute;
-        top: 10px;
-        font-size: 12px;
-        left: 35px;
-}
-
-.hideButtonHidden {
-    display: none;
-}
-
-.arrow__hide__visible {
-    display: flex;
-        position: absolute;
-        justify-content: center;
-        width: 20px;
-        height: 20px;
-        top: 8px;
-        left: 10px;
-}
-
-.arrow__expand__visible {
-    display: flex;
-        position: absolute;
-        justify-content: center;
-        width: 20px;
-        height: 20px;
-        top: -2px;
-        left: 0px;
-}
-
-/* .divide-screen {
-    display: grid;
-        grid-template-columns: 1fr 1fr; /* Две равные колонки 
-        height: 1000px;
-        width: 1100px;
-}
-
-.image-container {
-    width: 100%;
-    height: 80%;
-    overflow: hidden; /* Посмотреть, на что влияет 
-    position: relative;
-}
-
-.image-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Посмотреть, на что влияет 
-}
-
-.logo {
-    position: absolute;
-    width: 20%;
-    height: auto;
-    top: 30px;
-    left: 30px;
-}
-
-.text {
-    padding: 50px;
-    background-color: white;
-    display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-    color: #2A4A5C;
-}
-
-h1 {
-    font-family: 'Barlow-Bold', Arial, sans-serif;
-    font-size: 20px;
-    line-height: 1px;
-}
-
-p {
-    font-family: 'Barlow-Medium', Arial, sans-serif;
     font-size: 15px;
-    line-height: 1px;
-}
-
-.separator {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 250px;
-    margin: 40px 100px;
-}
-
-.separator::before,
-.separator::after {
-    content: "";
-    flex: 1;
-    height: 1px;
-    background: #ddd;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Тень для линий 
-}
-
-.separator-text {
-    padding: 0 12px;
-    color: #666;
-    font-family: 'Barlow-Medium', Arial, sans-serif;
-    font-size: 14px;
-    background: white; /* Чтобы текст перекрывал линию 
-    z-index: 1;
-}
-
-.buttons {
-    display: grid;
-        grid-template-columns: 1fr 1fr; /* Две равные колонки 
-        height: 30px;
-        width: 50px;
-        margin-top: 50px;
-        margin-right: 50px;
-}
-
-.Facebook {
-    background-color: #255A9B;
-    border: #255A9B;
-    color: white;
-    font-family: 'Barlow-Medium', Arial, sans-serif;
+    width: 120px;
     height: 30px;
-    width: 210px;
-    background-image: url('img/facebook.svg');
-    background-size: 15px;
-    background-repeat: no-repeat;
-    background-position: left 10px center;
-    padding-left: 30px;
-    margin-right: 20px;
     cursor: pointer;
-}
-
-.LinkedIn {
-    background-color: #0076B6;
-    border: #0076B6;
-    color: white;
-    font-family: 'Barlow-Medium', Arial, sans-serif;
-    height: 30px;
-    width: 210px;
-    background-image: url('img/linkedin.svg');
-    background-size: 15px;
-    background-repeat: no-repeat;
-    background-position: left 10px center;
-    padding-left: 30px;
-    margin-left: 10px;
-    cursor: pointer;
-}
-
-.form-container {
-    font-family: 'Barlow-Medium', Arial, sans-serif;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;
-    width: 450px;
-}
-  
-  /* Обёртка 
-.input-wrapper {
-    position: relative;
-}
-  
-  /* Сам label 
-.input-label-inside {
-    display: flex;
-    flex-direction: column;
-    border: 1px solid #ddd;
-    /* border-left: 1px solid #0076B6; 
-    border-radius: 2px;
-    padding: 4px 10px 6px;
-    font-size: 12px;
-    color: #6c757d; /* как в примере 
-    height: 50px;
-    justify-content: flex-start;
-    margin-bottom: 50px;
-}
-  
-  /* input без отдельной рамки 
-.input-field {
-    border: none;
-    outline: none;
-    font-size: 16px;
-    padding: 0;
-    margin: 0;
-    height: 100%;
-    font-family: inherit;
-}
-  
-.input-field:focus {
-    outline: none;
-}
-
-.radio-group {
-    font-family: 'Barlow-Medium', Arial, sans-serif;
-    font-size: 14px;
     display: flex;
     justify-content: space-between;
-    margin-top: 50px;
-    margin-bottom: 100px;
-}
-
-
-.tooltip-container {
-    position: relative;
-    display: inline-block;
-    color: #888;
-    cursor: pointer;
-    font-size: 14px;
+    align-items: center;
     margin-left: 10px;
 }
-  
-.tooltip-text {
-    visibility: hidden;
-    opacity: 0;
-    width: 240px;
-    background-color: #fff;
-    color: #333;
-    padding: 8px;
-    border-radius: 6px;
-    border: 1px solid #ccc;
-    position: absolute;
-    top: 22px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 10;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    transition: opacity 0.2s ease;
-}
-  
-.tooltip-container:hover .tooltip-text {
-    visibility: visible;
-    opacity: 1;
-}
-
-.checkbox-label{
-    font-family: 'Barlow-Medium', Arial, sans-serif;
-    font-size: 12px;
-}
-
-.Account {
-    margin-top: 60px;
-    font-family: 'Barlow-Medium', Arial, sans-serif;
-    font-size: 14px;
-    position: relative;
-    height: 40px;
-    width: 250px;
-    color: white;
-    background-color: #3698FB;
-    border: none;
-    border-radius: 2px;
-    cursor: pointer;
-}
-*/
