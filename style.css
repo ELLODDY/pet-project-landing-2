@@ -27,13 +27,6 @@
     font-style: medium;
 }
 
-body {
-    max-width: 1120px;
-    min-height: 535px;
-    background-color: var(--main-background);
-    overflow: hidden;
-}
-
 :root {
     --main-background: #F8F8F8;
     --carousel-background: #FFFFFF;
@@ -46,10 +39,27 @@ body {
     --actions__divided: #EAEAEA;
 }
 
+body {
+    background-color: var(--main-background);
+    max-width: 1120px;
+    min-height: 525px;
+}
+
 header {
     font-family: 'TTLakes-DemiBold', Arial, sans-serif;
     font-size: 2em;
     margin: 10px;
+}
+
+.logo {
+    position: absolute;
+    height: 30px;
+    left: -10px;
+}
+
+.title__icons {
+    display: flex;
+    justify-content: space-between;
 }
 
 .icons__top {
@@ -73,21 +83,6 @@ header {
 }
 
 .icon__circle img {
-    width: 15px;
-    height: 15px;
-}
-
-.icon__circle2 {
-    width: 30px;
-    height: 30px;
-    background-color: #FF2E63;
-    border-radius: 50%;
-    display: flex;
-        align-items: center;
-        justify-content: center;
-}
-
-.icon__circle2 img {
     width: 15px;
     height: 15px;
 }
@@ -128,6 +123,11 @@ header {
     border-radius: 5px;
 }
 
+.mainText__img {
+    display: flex;
+    justify-content: space-around;
+}
+
 .main__text {
     font-family: 'TTLakes-Regular', Arial, sans-serif;
     color: var(--second-text);
@@ -137,11 +137,36 @@ header {
     padding-top: 0;
 }
 
-.read__further {
+.text__buttons {
+    display: flex;
+    flex-direction: column;
+}
+
+.main__text--hidden {
+    display: none;
+}
+
+.main__text--visible {
+    display: block;
+}
+
+.textHide__button--hidden {
+    display: none;
+}
+
+.readFurther__button--visible, .textHide__button--visible {
     font-family: 'TTLakes-Medium', Arial, sans-serif;
     font-size: 20px;
     color: var(--black-text);
     cursor: pointer;
+    display: flex;
+        justify-content: flex-start;
+        gap: 10px;
+        margin-top: 10px;
+}
+
+.readFurther__button--hidden {
+    display: none;
 }
 
 .brands__basic__text {
@@ -152,8 +177,6 @@ header {
 
 .buttons__background {
     background-color: var(--actions__divided);
-    width: 1120px;
-    height: 300px;
     z-index: 0
 }
 
@@ -166,15 +189,11 @@ header {
     padding: 10px;
 }
 
-.hidden {
-    display: flex;
-    justify-content: flex-start;
-    padding: 10px;
-    align-items: center;
-    gap: 20px;
+.apple, .hp {
+    height: 40px;
 }
 
-.brandsHiddenString { /* класс, вызываемый в js, убирает дивы с брендами */
+.brandsHiddenString {
     display: none;
 }
 
@@ -208,4 +227,414 @@ header {
     justify-content: space-between;
     align-items: center;
     margin-left: 10px;
+}
+
+@media (max-width: 768px) {
+
+    header {
+        font-family: 'TTLakes-DemiBold', Arial, sans-serif;
+        font-size: 20px;
+        margin: 10px;
+        margin-top: 20px;
+    }
+
+    .logo {
+        position: absolute;
+        height: 20px;
+        left: -10px;
+        margin-top: -10px;
+    }
+
+    .title__icons {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .icons__top {
+        font-family: 'TTLakes-Medium', Arial, sans-serif;
+        font-size: 12px;
+        display: flex;
+            align-items: flex-end;
+            flex-direction: row;
+            gap: 10px;
+            cursor: pointer;
+    }
+
+    .icon__circle {
+        width: 30px;
+        height: 30px;
+        background-color: #FF2E63;
+        border-radius: 50%;
+        display: flex;
+            align-items: center;
+            justify-content: center;
+    }
+
+    .icon__circle img {
+        width: 15px;
+        height: 15px;
+    }
+
+    .pages__names {
+        font-family: 'TTLakes-Light', Arial, sans-serif;
+        font-size: 11px;
+        display: flex;
+        justify-content: space-around;
+        margin: 20px;
+    }
+
+    .pages__names span {
+        padding: 4px 8px;
+        cursor: pointer;
+    }
+
+    .pages__names span:hover {
+        outline: 1px solid #41F6D7;
+        border-radius: 5px;
+    }
+
+    .new__string {
+        font-family: 'TTLakes-Light', Arial, sans-serif;
+        font-size: 11px;
+        width: 60px;
+        height: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 30px;
+        padding: 1px 4px;
+        cursor: pointer;
+    }
+
+    .new__string:hover {
+        outline: 1px solid #41F6D7;
+        border-radius: 5px;
+    }
+
+    .mainText__img {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .main__text {
+        font-family: 'TTLakes-Regular', Arial, sans-serif;
+        color: var(--second-text);
+        line-height: 15px;
+        font-size: 11px;
+        padding: 20px;
+        padding-top: 0;
+    }
+
+    .main__img img {
+        width: 300px;
+        height: auto;
+    }
+
+    .text__buttons {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .main__text--hidden {
+        display: none;
+    }
+
+    .main__text--visible {
+        display: block;
+    }
+
+    .textHide__button--hidden {
+        display: none;
+    }
+
+    .readFurther__button--visible, .textHide__button--visible {
+        font-family: 'TTLakes-Medium', Arial, sans-serif;
+        font-size: 12px;
+        color: var(--black-text);
+        cursor: pointer;
+        display: flex;
+            justify-content: flex-start;
+            gap: 5px;
+            margin-top: 10px;
+    }
+
+    .readFurther__button--visible img, .textHide__button--visible img {
+        height: 20px;
+        margin-top: -1px;
+    }
+
+    .readFurther__button--hidden {
+        display: none;
+    }
+
+    .brands__basic__text {
+        font-family: 'TTLakes-Light', Arial, sans-serif;
+        font-size: 12px;
+        padding: 20px;
+    }
+
+    .buttons__background {
+        background-color: var(--actions__divided);
+        z-index: 0
+    }
+
+    .brandsCard {
+        width: 150px;
+        height: auto;
+        display: flex;
+        justify-content: space-between;
+        background-color: var(--carousel-background);
+        padding: 10px;
+    }
+
+    .brandsCard img {
+        height: 20px;
+    }
+
+    .brandsHiddenString {
+        display: none;
+    }
+
+    .hide__button {
+        font-family: 'TTLakes-Light', Arial, sans-serif;
+        font-size: 12px;
+        width: 70px;
+        height: 30px;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-left: 10px;
+    }
+
+    .hideButtonHidden {
+        display: none;
+    }
+
+    .showAll__button__hidden {
+        display: none;
+    }
+
+    .showAll__button__visible {
+        font-family: 'TTLakes-Light', Arial, sans-serif;
+        font-size: 12px;
+        width: 120px;
+        height: 30px;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-left: 10px;
+    }
+}
+
+@media (max-width: 425px) {
+ 
+    header {
+        font-family: 'TTLakes-DemiBold', Arial, sans-serif;
+        font-size: 15px;
+        margin: 10px;
+        margin-top: 20px;
+    }
+
+    .logo {
+        position: absolute;
+        height: 20px;
+        left: -10px;
+        margin-top: -10px;
+    }
+
+    .title__icons {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .icons__top {
+        font-family: 'TTLakes-Medium', Arial, sans-serif;
+        font-size: 12px;
+        display: flex;
+            justify-content: center;
+            flex-direction: row;
+            gap: 20px;
+            cursor: pointer;
+    }
+
+    .icon__circle {
+        width: 30px;
+        height: 30px;
+        background-color: #FF2E63;
+        border-radius: 50%;
+        display: flex;
+            align-items: center;
+            justify-content: center;
+    }
+
+    .icon__circle img {
+        width: 15px;
+        height: 15px;
+    }
+
+    .pages__names {
+        font-family: 'TTLakes-Light', Arial, sans-serif;
+        font-size: 11px;
+        display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 20px;
+            gap: 10px;
+    }
+
+    .pages__names span {
+        padding: 4px 8px;
+        cursor: pointer;
+    }
+
+    .pages__names span:hover {
+        outline: 1px solid #41F6D7;
+        border-radius: 5px;
+    }
+
+    .new__string {
+        font-family: 'TTLakes-Light', Arial, sans-serif;
+        font-size: 11px;
+        width: 60px;
+        height: 20px;
+        display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 155px;
+            margin-top: -10px;
+            padding: 1px 4px;
+            cursor: pointer;
+    }
+
+    .new__string:hover {
+        outline: 1px solid #41F6D7;
+        border-radius: 5px;
+    }
+
+    .mainText__img {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .main__text {
+        font-family: 'TTLakes-Regular', Arial, sans-serif;
+        color: var(--second-text);
+        line-height: 15px;
+        font-size: 11px;
+        padding: 20px;
+        padding-top: 0;
+    }
+
+    .main__img img {
+        width: 300px;
+        height: auto;
+        margin-left: 60px;
+        margin-bottom: 20px;
+    }
+
+    .text__buttons {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .main__text--hidden {
+        display: none;
+    }
+
+    .main__text--visible {
+        display: block;
+    }
+
+    .textHide__button--hidden {
+        display: none;
+    }
+
+    .readFurther__button--visible, .textHide__button--visible {
+        font-family: 'TTLakes-Medium', Arial, sans-serif;
+        font-size: 12px;
+        color: var(--black-text);
+        cursor: pointer;
+        display: flex;
+            justify-content: flex-start;
+            gap: 5px;
+            margin-top: 10px;
+    }
+
+    .readFurther__button--visible img {
+        height: 20px;
+        margin-top: 8px;
+    }
+
+    .textHide__button--visible img {
+        height: 20px;
+        margin-top: -1px;
+    }
+
+    .readFurther__button--hidden {
+        display: none;
+    }
+
+    .brands__basic__text {
+        font-family: 'TTLakes-Light', Arial, sans-serif;
+        font-size: 12px;
+        padding: 20px;
+        margin-left: 50px;
+    }
+
+    .buttons__background {
+        background-color: var(--actions__divided);
+        z-index: 0
+    }
+
+    .brandsCard {
+        width: 150px;
+        height: auto;
+        display: flex;
+        justify-content: space-between;
+        background-color: var(--carousel-background);
+        padding: 10px;
+    }
+
+    .brandsCard img {
+        height: 20px;
+    }
+
+    .brandsHiddenString {
+        display: none;
+    }
+
+    .hide__button {
+        font-family: 'TTLakes-Light', Arial, sans-serif;
+        font-size: 12px;
+        width: 70px;
+        height: 30px;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-left: 10px;
+    }
+
+    .hideButtonHidden {
+        display: none;
+    }
+
+    .showAll__button__hidden {
+        display: none;
+    }
+
+    .showAll__button__visible {
+        font-family: 'TTLakes-Light', Arial, sans-serif;
+        font-size: 12px;
+        width: 120px;
+        height: 30px;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-left: 10px;
+    }
 }
