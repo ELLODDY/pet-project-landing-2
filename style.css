@@ -142,16 +142,12 @@ header {
     flex-direction: column;
 }
 
-.main__text--hidden {
+.main__text--hidden, .textHide__button--hidden {
     display: none;
 }
 
 .main__text--visible {
     display: block;
-}
-
-.textHide__button--hidden {
-    display: none;
 }
 
 .readFurther__button--visible, .textHide__button--visible {
@@ -177,9 +173,67 @@ header {
 
 .buttons__background {
     background-color: var(--actions__divided);
+    margin-top: 20px;
     z-index: 0
 }
 
+.brandsCard {
+    width: 200px;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--carousel-background);
+    padding: 10px;
+}
+
+.swiper {
+    width: 200px;
+    height: 100px;
+    /* position: relative; */
+    margin-top: 10px;
+}
+
+.swiper-wrapper {
+    /* margin-top: 10px; */
+}
+
+.swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: auto;
+    background: var(--carousel-background);
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+.swiper-pagination {
+    /* position: absolute; */
+    margin-bottom: -15px;
+    transform: translateY(-50%);
+
+}
+
+/* .brands {
+    display: flex;
+    /* flex-wrap: wrap; */
+    /* padding: 10px;
+    margin-top: 10px; 
+    align-items: center;
+    /* gap: 20px; 
+} */
+
+/*
+.swiper {
+    display: none;
+}
+
+.swiper-wrapper {
+    display: none;
+}
+*/
+
+/*
 .brandsCard {
     width: 200px;
     height: auto;
@@ -195,7 +249,7 @@ header {
 
 .brandsHiddenString {
     display: none;
-}
+} */
 
 .hide__button {
     font-family: 'TTLakes-Light', Arial, sans-serif;
@@ -367,6 +421,26 @@ header {
         display: none;
     }
 
+    .brands {
+        display: flex;
+        margin-top: 10px;
+        align-items: center;
+    }
+
+    .swiper-wrapper {
+        height: 80px;
+    }
+
+    .swiper-pagination {
+        margin-bottom: -5px;
+    }
+
+    .swiper-slide {
+        width: 200px;
+        height: 80px;
+        margin-right: 10px;
+    }
+
     .brands__basic__text {
         font-family: 'TTLakes-Light', Arial, sans-serif;
         font-size: 12px;
@@ -426,6 +500,19 @@ header {
         align-items: center;
         margin-left: 10px;
     }
+
+    /* .swiper-wrapper {
+        height: 80px;
+  }
+
+    .swiper-slide {
+    display: none;
+  }
+
+    .swiper-pagination {
+    display: none;
+  } */
+
 }
 
 @media (max-width: 425px) {
@@ -576,65 +663,11 @@ header {
     .readFurther__button--hidden {
         display: none;
     }
-
+    
     .brands__basic__text {
         font-family: 'TTLakes-Light', Arial, sans-serif;
         font-size: 12px;
         padding: 20px;
         margin-left: 50px;
-    }
-
-    .buttons__background {
-        background-color: var(--actions__divided);
-        z-index: 0
-    }
-
-    .brandsCard {
-        width: 150px;
-        height: auto;
-        display: flex;
-        justify-content: space-between;
-        background-color: var(--carousel-background);
-        padding: 10px;
-    }
-
-    .brandsCard img {
-        height: 20px;
-    }
-
-    .brandsHiddenString {
-        display: none;
-    }
-
-    .hide__button {
-        font-family: 'TTLakes-Light', Arial, sans-serif;
-        font-size: 12px;
-        width: 70px;
-        height: 30px;
-        cursor: pointer;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-left: 10px;
-    }
-
-    .hideButtonHidden {
-        display: none;
-    }
-
-    .showAll__button__hidden {
-        display: none;
-    }
-
-    .showAll__button__visible {
-        font-family: 'TTLakes-Light', Arial, sans-serif;
-        font-size: 12px;
-        width: 120px;
-        height: 30px;
-        cursor: pointer;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-left: 10px;
     }
 }

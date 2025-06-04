@@ -40,3 +40,41 @@ textHideButton.addEventListener('click', () => {
     mainTextHidden.classList.remove('main__text--visible');
     readFurther.classList.remove('readFurther__button--hidden');
 })
+
+// // import Swiper JS
+// import Swiper from 'swiper';
+// import { Mousewheel, Pagination } from 'swiper/modules';
+// // import Swiper styles
+// import 'swiper/css';
+// import 'swiper/css/pagination';
+
+// import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs'
+
+// let swiperInstance = null;
+
+// function initSwiper() {
+//   if (window.innerWidth <= 768 && !swiperInstance) {
+
+    const swiperInstance = new Swiper('.swiper', {
+        
+        direction: 'horizontal',
+        loop: true,
+        slidesPerView: 1, // Кол-во видимых слайдов
+        spaceBetween: 10,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        mousewheel: true,
+    });
+
+//   } else if (window.innerWidth > 768 && swiperInstance) {
+//     swiperInstance.destroy();
+//     swiperInstance = null;
+//     }
+// }
+
+// initSwiper();
+
+// // Вызов при изменении размера окна
+// window.addEventListener('resize', initSwiper);
