@@ -173,8 +173,8 @@ header {
 
 .buttons__background {
     background-color: var(--actions__divided);
-    margin-top: 20px;
-    z-index: 0
+    /* z-index: 0; */
+    max-height: 500px;
 }
 
 .brandsCard {
@@ -187,60 +187,16 @@ header {
 }
 
 .swiper {
-    width: 200px;
-    height: 100px;
-    /* position: relative; */
-    margin-top: 10px;
+    display: none;
 }
 
-.swiper-wrapper {
-    /* margin-top: 10px; */
-}
-
-.swiper-slide {
+.brands {
     display: flex;
-    align-items: center;
-    justify-content: space-around;
-    height: auto;
-    background: var(--carousel-background);
-    margin-top: 10px;
-    border-radius: 10px;
-}
-
-.swiper-pagination {
-    /* position: absolute; */
-    margin-bottom: -15px;
-    transform: translateY(-50%);
-
-}
-
-/* .brands {
-    display: flex;
-    /* flex-wrap: wrap; */
-    /* padding: 10px;
+    flex-wrap: wrap;
+    padding: 10px;
     margin-top: 10px; 
     align-items: center;
-    /* gap: 20px; 
-} */
-
-/*
-.swiper {
-    display: none;
-}
-
-.swiper-wrapper {
-    display: none;
-}
-*/
-
-/*
-.brandsCard {
-    width: 200px;
-    height: auto;
-    display: flex;
-    justify-content: space-between;
-    background-color: var(--carousel-background);
-    padding: 10px;
+    gap: 20px; 
 }
 
 .apple, .hp {
@@ -249,7 +205,7 @@ header {
 
 .brandsHiddenString {
     display: none;
-} */
+}
 
 .hide__button {
     font-family: 'TTLakes-Light', Arial, sans-serif;
@@ -281,6 +237,27 @@ header {
     justify-content: space-between;
     align-items: center;
     margin-left: 10px;
+}
+
+/* .swiper {
+    width: 200px;
+    height: 100px;
+    margin-top: 10px;
+} */
+
+.swiper-slide {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        height: auto;
+        background: var(--carousel-background);
+        margin-top: 10px;
+        border-radius: 10px;
+}
+
+.swiper-pagination {
+        margin-bottom: -15px;
+        transform: translateY(-50%);
 }
 
 @media (max-width: 768px) {
@@ -427,29 +404,10 @@ header {
         align-items: center;
     }
 
-    .swiper-wrapper {
-        height: 80px;
-    }
-
-    .swiper-pagination {
-        margin-bottom: -5px;
-    }
-
-    .swiper-slide {
-        width: 200px;
-        height: 80px;
-        margin-right: 10px;
-    }
-
     .brands__basic__text {
         font-family: 'TTLakes-Light', Arial, sans-serif;
         font-size: 12px;
         padding: 20px;
-    }
-
-    .buttons__background {
-        background-color: var(--actions__divided);
-        z-index: 0
     }
 
     .brandsCard {
@@ -500,18 +458,6 @@ header {
         align-items: center;
         margin-left: 10px;
     }
-
-    /* .swiper-wrapper {
-        height: 80px;
-  }
-
-    .swiper-slide {
-    display: none;
-  }
-
-    .swiper-pagination {
-    display: none;
-  } */
 
 }
 
@@ -670,4 +616,42 @@ header {
         padding: 20px;
         margin-left: 50px;
     }
+
+    .brands {
+    display: none;
+    }
+
+    .buttons__background {
+        display: none;
+    }
+
+    .buttons__background__swiper {
+        height: 110px;
+        background-color: var(--actions__divided);
+    }
+
+    .brandsCard {
+        width: 200px;
+        height: auto;
+        display: flex;
+        justify-content: space-between;
+        background-color: var(--carousel-background);
+        padding: 10px;
+    }
+
+    .swiper {
+        display: block;
+        width: 200px;
+        height: 100px;
+        margin-top: 10px;
+    }
+
+    .showAll__button__visible {
+        display: none;
+    }
+
+    .hide__button {
+        display: none;
+    }
+
 }

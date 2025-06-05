@@ -41,32 +41,53 @@ textHideButton.addEventListener('click', () => {
     readFurther.classList.remove('readFurther__button--hidden');
 })
 
-// // import Swiper JS
-// import Swiper from 'swiper';
-// import { Mousewheel, Pagination } from 'swiper/modules';
-// // import Swiper styles
-// import 'swiper/css';
-// import 'swiper/css/pagination';
+let brandsSwiper = null;
 
-// import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs'
+  function handleBrandsSwiper() {
+    const isMobile = window.matchMedia('(max-width: 425px)').matches;
+
+    if (isMobile && !brandsSwiper) {
+      // Создаём Swiper, если мобильный и ещё не создан
+      brandsSwiper = new Swiper('.swiper', {
+        direction: 'horizontal',
+        slidesPerView: 1,
+        spaceBetween: 10,
+        loop: true,
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        mousewheel: true,
+      });
+    } 
+    else if (!isMobile && brandsSwiper) {
+      // Удаляем Swiper, если перешли на десктоп (>425px)
+      brandsSwiper.destroy(true, true);
+      brandsSwiper = null;
+    }
+  }
+
+  window.addEventListener('DOMContentLoaded', handleBrandsSwiper);
+  window.addEventListener('resize', handleBrandsSwiper);
+
 
 // let swiperInstance = null;
 
 // function initSwiper() {
 //   if (window.innerWidth <= 768 && !swiperInstance) {
 
-    const swiperInstance = new Swiper('.swiper', {
+//     const swiperInstance = new Swiper('.swiper', {
         
-        direction: 'horizontal',
-        loop: true,
-        slidesPerView: 1, // Кол-во видимых слайдов
-        spaceBetween: 10,
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-        },
-        mousewheel: true,
-    });
+//         direction: 'horizontal',
+//         loop: true,
+//         slidesPerView: 1, // Кол-во видимых слайдов
+//         spaceBetween: 10,
+//         pagination: {
+//             el: '.swiper-pagination',
+//             clickable: true,
+//         },
+//         mousewheel: true,
+//     });
 
 //   } else if (window.innerWidth > 768 && swiperInstance) {
 //     swiperInstance.destroy();
