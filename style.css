@@ -91,8 +91,11 @@ header {
     font-family: 'TTLakes-Light', Arial, sans-serif;
     font-size: 15px;
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start;
     margin: 20px;
+    margin-right: 100px;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 .pages__names span {
@@ -101,24 +104,6 @@ header {
 }
 
 .pages__names span:hover {
-    outline: 1px solid #41F6D7;
-    border-radius: 5px;
-}
-
-.new__string {
-    font-family: 'TTLakes-Light', Arial, sans-serif;
-    font-size: 15px;
-    width: 60px;
-    height: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: 40px;
-    padding: 1px 4px;
-    cursor: pointer;
-}
-
-.new__string:hover {
     outline: 1px solid #41F6D7;
     border-radius: 5px;
 }
@@ -142,7 +127,7 @@ header {
     flex-direction: column;
 }
 
-.main__text--hidden, .textHide__button--hidden {
+.main__text--hidden {
     display: none;
 }
 
@@ -150,7 +135,11 @@ header {
     display: block;
 }
 
-.readFurther__button--visible, .textHide__button--visible {
+.hideButton--hidden {
+    display: none;
+}
+
+.showAllButton--visible, .hideButton--visible {
     font-family: 'TTLakes-Medium', Arial, sans-serif;
     font-size: 20px;
     color: var(--black-text);
@@ -161,7 +150,7 @@ header {
         margin-top: 10px;
 }
 
-.readFurther__button--hidden {
+.showAllButton--hidden {
     display: none;
 }
 
@@ -169,13 +158,14 @@ header {
     font-family: 'TTLakes-Light', Arial, sans-serif;
     font-size: 15px;
     padding: 20px;
+    display: flex;
+    justify-content: flex-start;
 }
 
-.buttons__background {
+/* .buttons__background {
     background-color: var(--actions__divided);
-    /* z-index: 0; */
     max-height: 500px;
-}
+} */
 
 .brandsCard {
     width: 200px;
@@ -184,6 +174,7 @@ header {
     justify-content: space-between;
     background-color: var(--carousel-background);
     padding: 10px;
+    border: 1px solid #EAEAEA;
 }
 
 .swiper {
@@ -204,7 +195,7 @@ header {
 }
 
 .brandsHiddenString {
-    display: none;
+    display: none !important;
 }
 
 .hide__button {
@@ -217,6 +208,7 @@ header {
     justify-content: space-between;
     align-items: center;
     margin-left: 10px;
+    margin-bottom: 20px;
 }
 
 .hideButtonHidden {
@@ -237,28 +229,55 @@ header {
     justify-content: space-between;
     align-items: center;
     margin-left: 10px;
+    margin-bottom: 20px;
 }
-
-/* .swiper {
-    width: 200px;
-    height: 100px;
-    margin-top: 10px;
-} */
 
 .swiper-slide {
         display: flex;
         align-items: center;
         justify-content: space-around;
         height: auto;
+        width: 100px;
         background: var(--carousel-background);
         margin-top: 10px;
         border-radius: 10px;
+        
 }
 
 .swiper-pagination {
         margin-bottom: -15px;
         transform: translateY(-50%);
 }
+
+.technics {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left: 10px;
+    margin-right: 10px;
+    gap: 10px;
+}
+
+.technics__card {
+    font-family: 'TTLakes-Medium', Arial, sans-serif;
+    font-size: 9px;
+    width: 100px;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--carousel-background);
+    padding: 10px;
+    border: 1px solid #EAEAEA;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.technics__card__button {
+    height: 20px;
+    width: 20px;
+    margin-top: 20px;
+}
+
 
 @media (max-width: 768px) {
 
@@ -307,39 +326,8 @@ header {
     }
 
     .pages__names {
-        font-family: 'TTLakes-Light', Arial, sans-serif;
         font-size: 11px;
-        display: flex;
-        justify-content: space-around;
         margin: 20px;
-    }
-
-    .pages__names span {
-        padding: 4px 8px;
-        cursor: pointer;
-    }
-
-    .pages__names span:hover {
-        outline: 1px solid #41F6D7;
-        border-radius: 5px;
-    }
-
-    .new__string {
-        font-family: 'TTLakes-Light', Arial, sans-serif;
-        font-size: 11px;
-        width: 60px;
-        height: 20px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-left: 30px;
-        padding: 1px 4px;
-        cursor: pointer;
-    }
-
-    .new__string:hover {
-        outline: 1px solid #41F6D7;
-        border-radius: 5px;
     }
 
     .mainText__img {
@@ -361,41 +349,14 @@ header {
         height: auto;
     }
 
-    .text__buttons {
-        display: flex;
-        flex-direction: column;
-    }
 
-    .main__text--hidden {
-        display: none;
-    }
-
-    .main__text--visible {
-        display: block;
-    }
-
-    .textHide__button--hidden {
-        display: none;
-    }
-
-    .readFurther__button--visible, .textHide__button--visible {
-        font-family: 'TTLakes-Medium', Arial, sans-serif;
+    .showAllButton--visible, .hideButton--visible {
         font-size: 12px;
-        color: var(--black-text);
-        cursor: pointer;
-        display: flex;
-            justify-content: flex-start;
-            gap: 5px;
-            margin-top: 10px;
     }
 
-    .readFurther__button--visible img, .textHide__button--visible img {
+    .showAllButton--visible img, .hideButton--visible img {
         height: 20px;
         margin-top: -1px;
-    }
-
-    .readFurther__button--hidden {
-        display: none;
     }
 
     .brands {
@@ -412,20 +373,15 @@ header {
 
     .brandsCard {
         width: 150px;
-        height: auto;
-        display: flex;
-        justify-content: space-between;
-        background-color: var(--carousel-background);
-        padding: 10px;
     }
 
     .brandsCard img {
         height: 20px;
     }
 
-    .brandsHiddenString {
+    /* .brandsHiddenString {
         display: none;
-    }
+    } */
 
     .hide__button {
         font-family: 'TTLakes-Light', Arial, sans-serif;
@@ -509,42 +465,10 @@ header {
     }
 
     .pages__names {
-        font-family: 'TTLakes-Light', Arial, sans-serif;
         font-size: 11px;
-        display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin: 20px;
-            gap: 10px;
-    }
-
-    .pages__names span {
-        padding: 4px 8px;
-        cursor: pointer;
-    }
-
-    .pages__names span:hover {
-        outline: 1px solid #41F6D7;
-        border-radius: 5px;
-    }
-
-    .new__string {
-        font-family: 'TTLakes-Light', Arial, sans-serif;
-        font-size: 11px;
-        width: 60px;
-        height: 20px;
-        display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-left: 155px;
-            margin-top: -10px;
-            padding: 1px 4px;
-            cursor: pointer;
-    }
-
-    .new__string:hover {
-        outline: 1px solid #41F6D7;
-        border-radius: 5px;
+        justify-content: center;
+        margin: 20px;
+        gap: 10px;
     }
 
     .mainText__img {
@@ -567,81 +491,38 @@ header {
         margin-left: 60px;
         margin-bottom: 20px;
     }
-
-    .text__buttons {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .main__text--hidden {
-        display: none;
-    }
-
-    .main__text--visible {
-        display: block;
-    }
-
-    .textHide__button--hidden {
-        display: none;
-    }
-
-    .readFurther__button--visible, .textHide__button--visible {
-        font-family: 'TTLakes-Medium', Arial, sans-serif;
-        font-size: 12px;
-        color: var(--black-text);
-        cursor: pointer;
-        display: flex;
-            justify-content: flex-start;
-            gap: 5px;
-            margin-top: 10px;
-    }
-
-    .readFurther__button--visible img {
-        height: 20px;
-        margin-top: 8px;
-    }
-
-    .textHide__button--visible img {
-        height: 20px;
-        margin-top: -1px;
-    }
-
-    .readFurther__button--hidden {
-        display: none;
-    }
     
     .brands__basic__text {
         font-family: 'TTLakes-Light', Arial, sans-serif;
         font-size: 12px;
         padding: 20px;
-        margin-left: 50px;
     }
 
     .brands {
     display: none;
     }
 
-    .buttons__background {
+    /* .buttons__background {
         display: none;
     }
 
     .buttons__background__swiper {
         height: 110px;
         background-color: var(--actions__divided);
-    }
+    } */
 
-    .brandsCard {
+    /* .brandsCard {
         width: 200px;
         height: auto;
         display: flex;
         justify-content: space-between;
         background-color: var(--carousel-background);
         padding: 10px;
-    }
+    } */
 
     .swiper {
         display: block;
-        width: 200px;
+        width: 210px;
         height: 100px;
         margin-top: 10px;
     }

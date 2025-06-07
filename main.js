@@ -1,45 +1,54 @@
+// Кнопки скрыть/показать, скрытие плашек
 
-const hide__button = document.querySelector('.hide__button');
-const showAll__button = document.querySelector('.showAll__button__hidden');
+document.querySelectorAll('.technicsAndButtons').forEach(section => {
+    const hideBtn = section.querySelector('.hide__button');
+    const showBtn = section.querySelector('.showAll__button__hidden');
 
-hide__button.addEventListener('click', () => {
-    hide__button.classList.toggle('hideButtonHidden');
-    hiddenBransCard();
-    showAll__button.classList.toggle('showAll__button__visible');
+     // Функция для скрытия/показа элементов
+    function toggleItems() {
+        const hiddenItems = section.querySelectorAll('.hidden');
+        hiddenItems.forEach(item => item.classList.toggle('brandsHiddenString'));
+    }
+
+    hideBtn.addEventListener('click', () => {
+    toggleItems();
+    // Прячем “Скрыть”, показываем “Показать все”
+    hideBtn.classList.add('brandsHiddenString');
+    showBtn.classList.add('showAll__button__visible');
+    });
+
+    showBtn.addEventListener('click', () => {
+    toggleItems();
+    // Прячем “Показать все”, возвращаем “Скрыть”
+    showBtn.classList.remove('showAll__button__visible');
+    hideBtn.classList.remove('brandsHiddenString');
+    });
 });
 
-function hiddenBransCard() {
-    const hiddenElements = document.querySelectorAll('.hidden');
-    for (let i = 0; i < hiddenElements.length; i++) {
-        const element = hiddenElements[i];
-        element.classList.toggle('brandsHiddenString');
-    };
-};
 
-showAll__button.addEventListener('click', () => {
-    showAll__button.classList.remove('showAll__button__visible');
-    hide__button.classList.remove('hideButtonHidden');
-    hiddenBransCard();
-});
+// Скрытие текста
 
 const mainTextHidden = document.querySelector('.main__text--hidden');
-const readFurther = document.querySelector('.readFurther__button--visible');
+const readFurther = document.querySelector('.showAllButton--visible');
 const mainTextChange = document.querySelector('.main__text__change');
-const textHideButton = document.querySelector('.textHide__button--hidden');
+const textHideButton = document.querySelector('.hideButton--hidden');
 
 readFurther.addEventListener('click', () => {
-    readFurther.classList.toggle('readFurther__button--hidden');
+    readFurther.classList.toggle('showAllButton--hidden');
     mainTextChange.textContent = ('Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает большое количество постоянных клиентов.');
     mainTextHidden.classList.toggle('main__text--visible');
-    textHideButton.classList.toggle('textHide__button--visible');
+    textHideButton.classList.toggle('hideButton--visible');
 });
 
 textHideButton.addEventListener('click', () => {
-    textHideButton.classList.remove('textHide__button--visible');
+    textHideButton.classList.remove('hideButton--visible');
     mainTextChange.textContent = ('Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает большое количество постоянных клиентов...');
     mainTextHidden.classList.remove('main__text--visible');
-    readFurther.classList.remove('readFurther__button--hidden');
-})
+    readFurther.classList.remove('showAllButton--hidden');
+});
+
+
+// Swiper
 
 let brandsSwiper = null;
 
@@ -70,32 +79,3 @@ let brandsSwiper = null;
   window.addEventListener('DOMContentLoaded', handleBrandsSwiper);
   window.addEventListener('resize', handleBrandsSwiper);
 
-
-// let swiperInstance = null;
-
-// function initSwiper() {
-//   if (window.innerWidth <= 768 && !swiperInstance) {
-
-//     const swiperInstance = new Swiper('.swiper', {
-        
-//         direction: 'horizontal',
-//         loop: true,
-//         slidesPerView: 1, // Кол-во видимых слайдов
-//         spaceBetween: 10,
-//         pagination: {
-//             el: '.swiper-pagination',
-//             clickable: true,
-//         },
-//         mousewheel: true,
-//     });
-
-//   } else if (window.innerWidth > 768 && swiperInstance) {
-//     swiperInstance.destroy();
-//     swiperInstance = null;
-//     }
-// }
-
-// initSwiper();
-
-// // Вызов при изменении размера окна
-// window.addEventListener('resize', initSwiper);
