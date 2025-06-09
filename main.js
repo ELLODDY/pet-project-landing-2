@@ -50,32 +50,109 @@ textHideButton.addEventListener('click', () => {
 
 // Swiper
 
-let brandsSwiper = null;
+function initResponsiveSwiper(selector) {
+  let instance = null;
 
   function handleBrandsSwiper() {
     const isMobile = window.matchMedia('(max-width: 425px)').matches;
+    const container = document.querySelector(selector);
+    if (!container) return;
 
-    if (isMobile && !brandsSwiper) {
+    if (isMobile && !instance) {
       // Создаём Swiper, если мобильный и ещё не создан
-      brandsSwiper = new Swiper('.swiper', {
+      instance = new Swiper(container, {
         direction: 'horizontal',
         slidesPerView: 1,
         spaceBetween: 10,
         loop: true,
         pagination: {
-          el: '.swiper-pagination',
+          el: container.querySelector('.swiper-pagination'),
           clickable: true,
         },
         mousewheel: true,
       });
     } 
-    else if (!isMobile && brandsSwiper) {
+    else if (!isMobile && instance) {
       // Удаляем Swiper, если перешли на десктоп (>425px)
-      brandsSwiper.destroy(true, true);
-      brandsSwiper = null;
+      instance.destroy(true, true);
+      instance = null;
     }
   }
 
   window.addEventListener('DOMContentLoaded', handleBrandsSwiper);
   window.addEventListener('resize', handleBrandsSwiper);
+}
 
+initResponsiveSwiper('.swiper-1');
+initResponsiveSwiper('.swiper-2');
+
+
+// let brandsSwiper = null;
+
+//   function handleBrandsSwiper() {
+//     const isMobile = window.matchMedia('(max-width: 425px)').matches;
+
+//     if (isMobile && !brandsSwiper) {
+//       // Создаём Swiper, если мобильный и ещё не создан
+//       brandsSwiper = new Swiper('.swiper', {
+//         direction: 'horizontal',
+//         slidesPerView: 1,
+//         spaceBetween: 10,
+//         loop: true,
+//         pagination: {
+//           el: '.swiper-pagination',
+//           clickable: true,
+//         },
+//         mousewheel: true,
+//       });
+//     } 
+//     else if (!isMobile && brandsSwiper) {
+//       // Удаляем Swiper, если перешли на десктоп (>425px)
+//       brandsSwiper.destroy(true, true);
+//       brandsSwiper = null;
+//     }
+//   }
+
+//   window.addEventListener('DOMContentLoaded', handleBrandsSwiper);
+//   window.addEventListener('resize', handleBrandsSwiper);
+
+
+// // Универсальный свайпер
+
+// const swiperContainers = document.querySelectorAll('.swiper');
+
+// const sliders = Array.from(swiperContainers).map(container => ({
+//   container,
+//   instance: null
+// }));
+
+// function handleBrandsSwiper() {
+//     const isMobile = window.matchMedia('(max-width: 425px)').matches;
+
+//     sliders.forEach((slider) => {
+//     const { container, instance } = slider;
+
+//     if (isMobile && !instance) {
+//       // Создаём Swiper, если мобильный и ещё не создан
+//       slider.instance = new Swiper(container, {
+//         direction: 'horizontal',
+//         slidesPerView: 1,
+//         spaceBetween: 10,
+//         loop: true,
+//         pagination: {
+//           el: '.swiper-pagination',
+//           clickable: true,
+//         },
+//         mousewheel: true,
+//       });
+//     }
+//     else if (!isMobile && instance) {
+//       // Удаляем Swiper, если перешли на десктоп (>425px)
+//       instance.destroy(true, true);
+//       slider.instance = null;
+//     };
+//   });
+// };
+
+//   window.addEventListener('DOMContentLoaded', handleBrandsSwiper);
+//   window.addEventListener('resize', handleBrandsSwiper);
