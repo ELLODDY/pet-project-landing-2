@@ -295,6 +295,65 @@ header {
     margin-top: 20px;
 }
 
+/* .services {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'TTLakes-Medium', Arial, sans-serif;
+    font-size: 10px;
+    margin: 10px;
+} */
+
+/* .services__details {
+    display: flex;
+    justify-content: center;
+    width: 100px;
+} */
+
+/* .services__background {
+    background-color: var(--carousel-background);
+} */
+
+.services__item {
+    width: 500px;
+}
+
+.toOrder {
+    background-color: #FF3E79;
+    color: white;
+    border: #FF3E79;
+    border-radius: 10px;
+    font-family: 'TTLakes-Medium', Arial, sans-serif;
+    font-size: 10px;
+}
+
+.services__table {
+    font-family: 'TTLakes-Medium', Arial, sans-serif;
+    font-size: 10px;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+tbody {
+    background-color: var(--carousel-background);
+}
+
+tr {
+    display: flex;
+    justify-content: space-between;
+}
+
+td, th {
+    display: flex;
+    align-items: center;
+    width: 84px;
+    text-align: left;
+    padding: 10px;
+}
+
+tr td:has(button) {
+    display: flex;
+    justify-content: flex-end;
+}
 
 @media (max-width: 768px) {
 
