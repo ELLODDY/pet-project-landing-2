@@ -85,6 +85,7 @@ function initResponsiveSwiper(selector) {
 
 initResponsiveSwiper('.swiper-1');
 initResponsiveSwiper('.swiper-2');
+initResponsiveSwiper('.swiper-3');
 
 
 // let brandsSwiper = null;
