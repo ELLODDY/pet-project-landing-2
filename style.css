@@ -57,9 +57,14 @@ header {
     left: -10px;
 }
 
+.headerMobile {
+    display: none;
+}
+
 .title__icons {
     display: flex;
     justify-content: space-between;
+    z-index: 0;
 }
 
 .icons__top {
@@ -87,6 +92,10 @@ header {
     height: 15px;
 }
 
+/* .pages__names__scroll {
+    width: 1120px;
+} */
+
 .pages__names {
     font-family: 'TTLakes-Light', Arial, sans-serif;
     font-size: 15px;
@@ -96,6 +105,7 @@ header {
     margin-right: 100px;
     flex-wrap: wrap;
     gap: 20px;
+    z-index: 100;
 }
 
 .pages__names span {
@@ -402,10 +412,25 @@ tr td:has(button) {
         height: 15px;
     }
 
+    /* .pages__names__scroll {
+        width: 768px;
+    } */
+
     .pages__names {
         font-size: 11px;
         margin: 20px;
+        margin-right: 0px;
+        flex-wrap: nowrap;
+        white-space: nowrap;
+        overflow-x: scroll;
+        /* width: 900px; */
+        max-width: 100%;
+        padding: 10px;
     }
+
+    /* .pages__names span {
+        height: 23px;
+    } */
 
     .mainText__img {
         display: flex;
@@ -506,15 +531,19 @@ tr td:has(button) {
     header {
         font-family: 'TTLakes-DemiBold', Arial, sans-serif;
         font-size: 15px;
-        margin: 10px;
-        margin-top: 20px;
+        margin: 0px;
+        margin-top: 0px;
     }
 
     .logo {
         position: absolute;
         height: 20px;
-        left: -10px;
-        margin-top: -10px;
+        left: 0px;
+        /* margin-top: -10px; */
+    }
+
+    .logo__text {
+        margin-left: 10px;
     }
 
     .title__icons {
@@ -524,13 +553,24 @@ tr td:has(button) {
     }
 
     .icons__top {
-        font-family: 'TTLakes-Medium', Arial, sans-serif;
-        font-size: 12px;
+        display: none;
+    }
+
+    .headerMobile {
         display: flex;
-            justify-content: center;
-            flex-direction: row;
-            gap: 20px;
-            cursor: pointer;
+        justify-content: space-between;
+        /* margin: 10px; */
+        background-color: var(--carousel-background);
+        height: 50px;
+        max-width: 425px;
+        align-items: center;
+        padding: 10px;
+        margin-bottom: 20px;
+    }
+
+    .icons__right, .icons__left {
+        display: flex;
+        gap: 10px;
     }
 
     .icon__circle {
@@ -550,7 +590,6 @@ tr td:has(button) {
 
     .pages__names {
         font-size: 11px;
-        justify-content: center;
         margin: 20px;
         gap: 10px;
     }
