@@ -1,0 +1,108 @@
+
+// .sidebar {
+//     width: 320px;
+//     min-height: 1024px;
+// }
+
+.sidebar__icons {
+    padding: 10px;
+    margin-bottom: 0px;
+    display: flex;
+        cursor: pointer;
+        justify-content: space-between;
+        background-color: var(--carousel-background);
+}
+
+.sidebar__iconsCircle img {
+    width: auto;
+    height: 30px;
+}
+
+.sidebar__logo img {
+    width: auto;
+    height: 40px;
+}
+
+.sidebar__logo {
+    margin-left: -220px;
+}
+
+.sidebar__menuAndContacts {
+    position: relative;
+    overflow-y: scroll;
+    padding: 25px;
+    padding-top: 10px;
+    // width: 320px;
+    // min-height: 1024px;
+    background-color: var(--carousel-background);
+}
+
+.sidebar__sections {
+    font-family: 'TTLakes-Medium', Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.sidebar__contacts {
+    margin-top: 300px;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.sidebar__iconsBottom {
+    display: flex;
+        cursor: pointer;
+        gap: 10px;
+}
+
+.sidebar__contacts__info {
+    gap: 15px;
+}
+
+.sidebar__languages {
+    font-family: 'TTLakes-Light', Arial, sans-serif;
+    font-size: 13px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.lang--active {
+    color: #7E7E82;
+}
+
+.lang:hover {
+    font-family: 'TTLakes-DemiBold', Arial, sans-serif;
+    cursor: pointer;
+}
+
+.hover-effect .sidebar__menu__item:not(:hover) {
+    filter: blur(1px);
+    opacity: 0.5;
+}
+
+.sidebar__menu__item {
+    position: relative;
+}
+
+.sidebar__menu__item::before {
+    opacity: 0;
+    position: absolute;
+    left: -25px;
+    top: -5px;
+    height: 30px;
+    width: 5px;
+    content: '';
+    background-image: url('assets 3 (sidebar)/img/highlight.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.sidebar__menu__item:hover::before {
+    opacity: 1;
+}

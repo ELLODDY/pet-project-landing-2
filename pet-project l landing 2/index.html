@@ -7,15 +7,17 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <!-- <link href="reset_css.css" rel="stylesheet">
     <link href="style.css" rel="stylesheet"> -->
+    <!-- <link href="./scss/main"> -->
 </head>
 
 <body>
     <header>
       
+      <div class="toHideforSidebar">
       <div class="headerMobile">
         
         <div class="icons__left">
-          <img src="assets 3 (sidebar)/img/before_burger.svg" class="icon__circle">
+          <img src="assets 3 (sidebar)/img/before_burger.svg" class="icon__circle sidebarActivationButton">
           <img style="height: 30px;" src="assets 3 (sidebar)/img/logo.svg">
         </div>
 
@@ -28,9 +30,12 @@
             <img style="height: 15px;" src="assets/img/some.svg">
           </div>
         </div>
+        </div>
 
       </div>
       
+      <div class="toHideforSidebar">
+
       <div class="title__icons">
       <div style="position: relative;">
         <div class="logo">
@@ -56,7 +61,7 @@
         </div>
 
       </div>
-    </div>
+      </div>
 
       <div class="pages__names">
       <span>Ремонтируемые бренды</span>
@@ -67,9 +72,11 @@
         <span>Отзывы</span>
       </div>
 
+      </div>
     </header>
 
 <main>
+  <div class="toHideforSidebar">
   <div class="mainText__img">
       <div class="main__text">
           <p>Мы являемся авторизованным сервисным центром по ремонту техники Dell.
@@ -491,10 +498,78 @@
     <div class="swiper-pagination"></div>
 
   </div>
+</div>
+  
+<!-- Ниже сайдбар -->
+    <div class="sidebar">
+
+    <div class="sidebar__icons">
+
+            <div class="sidebar__iconsCircle">
+                <img src="assets 3 (sidebar)/img/burger.svg" class="sidebarDeactivationButton">
+            </div>
+
+            <div class="sidebar__logo">
+                <img src="assets 3 (sidebar)/img/logo.svg">
+            </div>
+
+            <div class="sidebar__iconsCircle">
+                <img src="assets 3 (sidebar)/img/search.svg">
+            </div>
+
+      </div>
+
+      <div class="sidebar__menuAndContacts">
+            <div class="sidebar__sections sidebar__menu">
+                <span class="sidebar__menu__item">Ремонт техники</span>
+                <span class="sidebar__menu__item">Услуги и сервисы</span>
+                <span class="sidebar__menu__item">Корпоративным клиентам</span>
+                <span class="sidebar__menu__item">Продавцам техники</span>
+                <span class="sidebar__menu__item">Партнерам</span>
+                <span class="sidebar__menu__item">Производителям</span>
+                <span class="sidebar__menu__item">Наши сервисные центры</span>
+                <span class="sidebar__menu__item">Контакты</span>
+            </div>
+
+            <div class="sidebar__contacts">
+
+                <div class="sidebar__iconsBottom">
+
+                    <div class="sidebar__iconsCircle">
+                        <img src="assets 3 (sidebar)/img/phone.svg">
+                    </div>
+
+                    <div class="sidebar__iconsCircle">
+                        <img src="assets 3 (sidebar)/img/chat.svg">
+                    </div>
+
+                    <div class="sidebar__iconsCircle">
+                        <img src="assets 3 (sidebar)/img/profile.svg">
+                    </div>
+
+                </div>
+
+                <div class="sidebar__sections sidebar__contacts__info">
+                    <span>mail@cps.com</span>
+                    <span>8 800 890 8900</span>
+                </div>
+
+                <div class="sidebar__languages">
+                    <span class="lang">RU</span>
+                    <span class="lang">EN</span>
+                    <span class="lang">CH</span>
+                </div>
+
+            </div>
+
+          </div>
+
+        </div>
 
 </main>
 
 <script src="swiper-bundle.min.js"></script>
+<script src="sidebar.js"></script>
 <script type="module" src="main.js"></script>
 
 </body>

@@ -1,0 +1,311 @@
+
+@media (max-width: 768px) {
+
+    header {
+        font-family: 'TTLakes-DemiBold', Arial, sans-serif;
+        font-size: 20px;
+        margin: 10px;
+        margin-top: 20px;
+    }
+
+    .logo {
+        position: absolute;
+        height: 20px;
+        left: -10px;
+        margin-top: -10px;
+    }
+
+    .title__icons {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .icons__top {
+        font-family: 'TTLakes-Medium', Arial, sans-serif;
+        font-size: 12px;
+        display: flex;
+            align-items: flex-end;
+            flex-direction: row;
+            gap: 10px;
+            cursor: pointer;
+    }
+
+    .icon__circle {
+        width: 30px;
+        height: 30px;
+        background-color: #FF2E63;
+        border-radius: 50%;
+        display: flex;
+            align-items: center;
+            justify-content: center;
+    }
+
+    .icon__circle img {
+        width: 15px;
+        height: 15px;
+    }
+
+    .pages__names {
+        font-size: 11px;
+        margin: 20px;
+        margin-right: 0px;
+        flex-wrap: nowrap;
+        white-space: nowrap;
+        overflow-x: scroll;
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    .mainText__img {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .main__text {
+        font-family: 'TTLakes-Regular', Arial, sans-serif;
+        color: var(--second-text);
+        line-height: 15px;
+        font-size: 11px;
+        padding: 20px;
+        padding-top: 0;
+    }
+
+    .main__img img {
+        width: 300px;
+        height: auto;
+    }
+
+
+    .showAllButton--visible, .hideButton--visible {
+        font-size: 12px;
+    }
+
+    .showAllButton--visible img, .hideButton--visible img {
+        height: 20px;
+        margin-top: -1px;
+    }
+
+    .brands {
+        display: flex;
+        margin-top: 10px;
+        align-items: center;
+    }
+
+    .brands__basic__text {
+        font-family: 'TTLakes-Light', Arial, sans-serif;
+        font-size: 12px;
+        padding: 20px;
+    }
+
+    .brandsCard {
+        width: 150px;
+    }
+
+    .brandsCard img {
+        height: 20px;
+    }
+
+    .hide__button {
+        font-family: 'TTLakes-Light', Arial, sans-serif;
+        font-size: 12px;
+        width: 70px;
+        height: 30px;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-left: 10px;
+    }
+
+    .hideButtonHidden {
+        display: none;
+    }
+
+    .showAll__button__hidden {
+        display: none;
+    }
+
+    .showAll__button__visible {
+        font-family: 'TTLakes-Light', Arial, sans-serif;
+        font-size: 12px;
+        width: 120px;
+        height: 30px;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-left: 10px;
+    }
+
+    .services__item {
+        width: 200px;
+    }
+
+    td, th {
+    width: 65px;
+    }
+}
+
+@media (max-width: 425px) {
+ 
+    header {
+        font-family: 'TTLakes-DemiBold', Arial, sans-serif;
+        font-size: 15px;
+        margin: 0px;
+        margin-top: 0px;
+    }
+
+    .sidebar--active {
+        display: block;
+    }
+
+    .logo {
+        position: absolute;
+        height: 20px;
+        left: 0px;
+        top: 15px;
+    }
+
+    .logo__text {
+        margin: 20px 10px 0px 10px;
+    }
+
+    .title__icons {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .icons__top {
+        display: none;
+    }
+
+    .headerMobile {
+        display: flex;
+        justify-content: space-between;
+        background-color: var(--carousel-background);
+        height: 50px;
+        max-width: 425px;
+        align-items: center;
+        padding: 0px 10px 0px 10px;
+        // margin-bottom: 20px;
+    }
+
+    .icons__right, .icons__left {
+        display: flex;
+        gap: 10px;
+    }
+
+    .icon__circle {
+        width: 30px;
+        height: 30px;
+        background-color: #FF2E63;
+        border-radius: 50%;
+        display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+    }
+
+    .icon__circle img {
+        width: 15px;
+        height: 15px;
+    }
+
+    .pages__names {
+        font-size: 11px;
+        margin: 20px;
+        gap: 10px;
+    }
+
+    .mainText__img {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .main__text {
+        font-family: 'TTLakes-Regular', Arial, sans-serif;
+        color: var(--second-text);
+        line-height: 15px;
+        font-size: 11px;
+        padding: 20px;
+        padding-top: 0;
+    }
+
+    .main__img img {
+        width: 300px;
+        height: auto;
+        margin-left: 60px;
+        margin-bottom: 20px;
+    }
+    
+    .technicsAndButtons, .services__table {
+        display: none;
+    }
+
+    .brands__basic__text {
+        display: flex;
+        font-family: 'TTLakes-Light', Arial, sans-serif;
+        font-size: 12px;
+        padding: 20px;
+    }
+
+    .swiper-1 {
+        display: block;
+        width: 210px;
+        height: 100px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .swiper-2,  .swiper-3 {
+        display: block;
+        width: 210px;
+        height: 140px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .swiper-3 {
+        font-family: 'TTLakes-Medium', Arial, sans-serif;
+        font-size: 12px;
+    }
+
+    .services__text {
+        color: var(--second-text);
+    }
+
+    .services__slide {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 10px;
+        background: var(--carousel-background);
+        border-radius: 5px;
+        height: 120px;
+        padding-left: 10px;
+    }
+
+    .services__toOrder__first {
+       display: flex;
+       gap: 80px;
+    }
+
+    .services__toOrder {
+       display: flex;
+       gap: 60px;
+    }
+
+    .swiper-slide-2 span {
+        margin: -70px 0 0 -10px;
+        font-size: 14px;
+    }
+    
+    .technics__card__button {
+        margin-top: 45px;
+        margin-right: -10px;
+        height: 40px;
+        width: 40px;
+    }
+
+}
