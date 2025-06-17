@@ -1,11 +1,49 @@
 
+@media (max-width: 1040px) {
+    
+    .logo__text {
+        font-size: 25px;
+    }
+
+    .logo {
+        top: -5px;
+    }
+
+    .services__item {
+        max-width: 250px;
+    }
+
+    td, th {
+        max-width: 80px;
+    }
+
+    .main__img img {
+        max-width: 300px;
+    }
+
+}
+
 @media (max-width: 768px) {
+
+    body {
+        display: block;
+    }
+
+    .mainPage {
+        width: 100%;
+        min-height: 525px;
+        padding-left: 0px;
+    }
 
     header {
         font-family: 'TTLakes-DemiBold', Arial, sans-serif;
         font-size: 20px;
         margin: 10px;
         margin-top: 20px;
+    }
+
+    .sidebar {
+        display: none;
     }
 
     .logo {
@@ -137,16 +175,55 @@
         margin-left: 10px;
     }
 
+    // tr {
+    //     justify-content: flex-start;
+    // }
+
     .services__item {
-        width: 200px;
+        max-width: 150px;
     }
 
     td, th {
-    width: 65px;
+        max-width: 65px;
     }
+
+    .main__img img {
+        min-width: 200px;
+    }
+
+    .main__img {
+        display: flex;
+        justify-content: center;
+    }
+
+    .mainText__img {
+        flex-direction: column;
+    }
+
+    .commercial {
+        font-size: 15px;
+    }
+
+    .footer__text {
+        font-size: 9px;
+    }
+
+    .form--active {
+        width: 40%;
+    }
+
+    .form--2--active {
+        width: 40%;
+    }
+
 }
 
 @media (max-width: 425px) {
+
+    .mainPage {
+        max-width: 425px;
+        min-height: 525px;
+    }
  
     header {
         font-family: 'TTLakes-DemiBold', Arial, sans-serif;
@@ -156,6 +233,14 @@
     }
 
     .sidebar--active {
+        display: block;
+    }
+
+    .sidebar {
+        width: 100%;
+    }
+
+    .sidebarDeactivationButton {
         display: block;
     }
 
@@ -250,20 +335,48 @@
         padding: 20px;
     }
 
+    // .swiper-wrapper-1, .swiper-wrapper-2, .swiper-wrapper-3 {
+    //     position: relative;
+    // }
+
+    .swiper__fade--1 {
+        position: absolute;
+        top: 15px;
+        right: 0px;
+        width: 30px;
+        height: 60px;
+        pointer-events: none;
+        background: linear-gradient(to left, white 10%, rgba(255, 255, 255, 0));
+        z-index: 10;
+    }
+
+    .swiper__fade--2, .swiper__fade--3 {
+        position: absolute;
+        top: 5px;
+        right: 0px;
+        width: 30px;
+        height: 110px;
+        pointer-events: none;
+        background: linear-gradient(to left, white 10%, rgba(255, 255, 255, 0));
+        z-index: 10;
+    }
+
     .swiper-1 {
         display: block;
-        width: 210px;
+        width: 250px;
         height: 100px;
         margin-top: 20px;
         margin-bottom: 20px;
+        position: relative;
     }
 
     .swiper-2,  .swiper-3 {
         display: block;
-        width: 210px;
+        width: 250px;
         height: 140px;
         margin-top: 20px;
         margin-bottom: 20px;
+        position: relative;
     }
 
     .swiper-3 {
@@ -288,24 +401,40 @@
 
     .services__toOrder__first {
        display: flex;
-       gap: 80px;
+       gap: 50px;
     }
 
     .services__toOrder {
        display: flex;
-       gap: 60px;
+       gap: 30px;
     }
 
     .swiper-slide-2 span {
-        margin: -70px 0 0 -10px;
+        margin: -70px 0 0 10px;
         font-size: 14px;
     }
     
     .technics__card__button {
         margin-top: 45px;
-        margin-right: -10px;
+        margin-right: 10px;
         height: 40px;
         width: 40px;
+    }
+
+    .sidebar__icons {
+        margin-top: -20px;
+    }
+
+    .sidebar__contacts {
+        bottom: 30px;
+    }
+
+    .form--active {
+        width: 70%;
+    }
+
+    .form--2--active {
+        width: 70%;
     }
 
 }

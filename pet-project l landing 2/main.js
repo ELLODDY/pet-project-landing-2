@@ -65,7 +65,7 @@ function initResponsiveSwiper(selector) {
       // Создаём Swiper, если мобильный и ещё не создан
       instance = new Swiper(container, {
         direction: 'horizontal',
-        slidesPerView: 1,
+        slidesPerView: 1.4,
         spaceBetween: 10,
         loop: true,
         pagination: {
@@ -111,4 +111,63 @@ sidebarDeactivationButton.addEventListener('click', () => {
     el.classList.remove('toHideforSidebar--active');
   })
   sidebar.classList.remove('sidebar--active');
+});
+
+// forms
+
+let queryButtons = document.querySelectorAll('.query');
+let form = document.querySelector('.form');
+let overlays = document.querySelectorAll('.form-overlay');
+
+queryButtons.forEach(queryButton => {
+  queryButton.addEventListener('click', () => {
+    form.classList.add('form--active');
+    overlays.forEach(overlay => {
+      overlay.classList.add('form-overlay--active');
+    });
+  });
+})
+
+
+let formDeactivationButtons = document.querySelectorAll('.formDeactivationButton');
+
+formDeactivationButtons.forEach(formDeactivationButton => {
+  formDeactivationButton.addEventListener('click', () => {
+    form.classList.remove('form--active');
+    overlays.forEach(overlay => {
+      overlay.classList.remove('form-overlay--active');
+    });
+  })
+});
+
+
+let statusButtons = document.querySelectorAll('.status');
+let form__2 = document.querySelector('.form--2');
+
+statusButtons.forEach(statusButton => {
+  statusButton.addEventListener('click', () => {
+    form__2.classList.add('form--2--active');
+    overlays.forEach(overlay => {
+      overlay.classList.add('form-overlay--active');
+    });
+  });
+});
+
+formDeactivationButtons.forEach(formDeactivationButton => {
+  formDeactivationButton.addEventListener('click', () => {
+    form__2.classList.remove('form--2--active');
+    overlays.forEach(overlay => {
+      overlay.classList.remove('form-overlay--active');
+    });
+  })
+});
+
+overlays.forEach(overlay => {
+  overlay.addEventListener('click', () => {
+    form.classList.remove('form--active');
+    form__2.classList.remove('form--2--active');
+    overlays.forEach(overlay => {
+      overlay.classList.remove('form-overlay--active');
+    });
+  });
 });

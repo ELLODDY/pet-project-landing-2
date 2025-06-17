@@ -1,8 +1,9 @@
 
-// .sidebar {
-//     width: 320px;
-//     min-height: 1024px;
-// }
+.sidebar {
+    min-width: 260px;
+    min-height: 1024px;
+    background-color: var(--carousel-background);
+}
 
 .sidebar__icons {
     padding: 10px;
@@ -13,28 +14,32 @@
         background-color: var(--carousel-background);
 }
 
+.sidebar__iconsCircle {
+    display: contents;
+}
+
 .sidebar__iconsCircle img {
     width: auto;
     height: 30px;
 }
 
-.sidebar__logo img {
-    width: auto;
-    height: 40px;
+.sidebarDeactivationButton {
+    display: none;
 }
 
-.sidebar__logo {
-    margin-left: -220px;
+.sidebar__logo img {
+    width: auto;
+    height: 30px;
 }
 
 .sidebar__menuAndContacts {
-    position: relative;
-    overflow-y: scroll;
     padding: 25px;
     padding-top: 10px;
-    // width: 320px;
-    // min-height: 1024px;
     background-color: var(--carousel-background);
+    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .sidebar__sections {
@@ -47,11 +52,11 @@
 }
 
 .sidebar__contacts {
-    margin-top: 300px;
+    position: absolute;
+    bottom: 20px;
     gap: 20px;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
 }
 
 .sidebar__iconsBottom {

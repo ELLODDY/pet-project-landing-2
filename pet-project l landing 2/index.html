@@ -11,6 +11,75 @@
 </head>
 
 <body>
+
+  <!-- Ниже сайдбар -->
+    <div class="sidebar">
+
+    <div class="sidebar__icons">
+
+            <div class="sidebar__iconsCircle">
+                <img src="assets 3 (sidebar)/img/burger.svg" class="sidebarDeactivationButton">
+            </div>
+
+            <div class="sidebar__logo">
+                <img src="assets 3 (sidebar)/img/logo.svg">
+            </div>
+
+            <div class="sidebar__iconsCircle">
+                <img src="assets 3 (sidebar)/img/search.svg">
+            </div>
+
+      </div>
+
+      <div class="sidebar__menuAndContacts">
+            
+            <div class="sidebar__sections sidebar__menu">
+                <span class="sidebar__menu__item">Ремонт техники</span>
+                <span class="sidebar__menu__item">Услуги и сервисы</span>
+                <span class="sidebar__menu__item">Корпоративным клиентам</span>
+                <span class="sidebar__menu__item">Продавцам техники</span>
+                <span class="sidebar__menu__item">Партнерам</span>
+                <span class="sidebar__menu__item">Производителям</span>
+                <span class="sidebar__menu__item">Наши сервисные центры</span>
+                <span class="sidebar__menu__item">Контакты</span>
+            </div>
+
+            <div class="sidebar__contacts">
+
+                <div class="sidebar__iconsBottom">
+
+                    <div class="sidebar__iconsCircle">
+                        <img src="assets 3 (sidebar)/img/phone.svg">
+                    </div>
+
+                    <div class="sidebar__iconsCircle">
+                        <img src="assets 3 (sidebar)/img/chat.svg">
+                    </div>
+
+                    <div class="sidebar__iconsCircle">
+                        <img src="assets 3 (sidebar)/img/profile.svg">
+                    </div>
+
+                </div>
+
+                <div class="sidebar__sections sidebar__contacts__info">
+                    <span>mail@cps.com</span>
+                    <span>8 800 890 8900</span>
+                </div>
+
+                <div class="sidebar__languages">
+                    <span class="lang">RU</span>
+                    <span class="lang">EN</span>
+                    <span class="lang">CH</span>
+                </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+    <div class="mainPage">
     <header>
       
       <div class="toHideforSidebar">
@@ -22,15 +91,65 @@
         </div>
 
         <div class="icons__right">
-          <div class="icon__circle">
+          <div class="icon__circle query">
             <img style="height: 15px;" src="assets/img/settings.svg">
           </div>
         
-          <div class="icon__circle">
+          <div class="icon__circle status">
             <img style="height: 15px;" src="assets/img/some.svg">
           </div>
         </div>
         </div>
+
+        <div class="form-overlay"></div>
+        <div class="form">
+
+          <div class="sidebar__iconsCircle">
+                <img src="assets 3 (sidebar)/img/burger.svg" class="formDeactivationButton">
+          </div>
+
+          <div>
+            <div class="logo__feedback">
+              <img src="assets/img/light.svg">
+            </div>
+          </div>
+          <form action="/submit" method="POST" class="form__feedback">
+            <h2>Обратная связь</h2>
+          <input type="text" name="username" placeholder="Имя" required />
+          <input type="phone" name="phone" placeholder="Телефон" required />
+          <input type="email" name="email" placeholder="Email" required />
+          <input class="formInput__text" type="text" name="text" placeholder="Сообщение" required />
+          <span class="form__text">Нажимая "отправить", вы даете согласие на
+            <span class="form__text--hilight">обработку персональных данных</span>
+            и соглашаетесь с нашей <span class="form__text--hilight">политикой конфиденциальности</span>
+          </span>
+          <div class="form__toOrder__container"><button type="submit" class="form__toOrder">Отправить</button></div>
+          </form>
+        </div>
+
+        <div class="form-overlay"></div>
+        <div class="form--2">
+
+          <div class="sidebar__iconsCircle">
+                <img src="assets 3 (sidebar)/img/burger.svg" class="formDeactivationButton">
+          </div>
+
+          <div>
+            <div class="logo__feedback">
+              <img src="assets/img/light.svg">
+            </div>
+          </div>
+          <form action="/submit" method="POST" class="form__feedback">
+            <h2>Статус ремонта</h2>
+          <input type="phone" name="phone" placeholder="Телефон" required />
+          <span class="form__text">Нажимая "отправить", вы даете согласие на
+            <span class="form__text--hilight">обработку персональных данных</span>
+            и соглашаетесь с нашей <span class="form__text--hilight">политикой конфиденциальности</span>
+          </span>
+          <div class="form__toOrder__container"><button type="submit" class="form__toOrder">Отправить</button></div>
+          </form>
+        </div>
+
 
       </div>
       
@@ -76,6 +195,9 @@
     </header>
 
 <main>
+
+
+
   <div class="toHideforSidebar">
   <div class="mainText__img">
       <div class="main__text">
@@ -241,9 +363,12 @@
           <img src="assets 2/img/action.svg" class="action">
         </div>
 
+       
+
       </div>
       
       <div class="swiper-pagination"></div>
+      <div class="swiper__fade--1"></div>
     
     </div>
 
@@ -314,6 +439,7 @@
 
     <!-- Ниже только для свайпера код -->
     
+    <div class="swiper__container">
     <div class="swiper swiper-2">
     <div class="swiper-wrapper swiper-wrapper-2">
         
@@ -362,9 +488,12 @@
           <img src="assets 2/img/action.svg" class="technics__card__button">
         </div>
         
+        
+
       </div>
 
       <div class="swiper-pagination"></div>
+      <div class="swiper__fade--2"></div>
 
       </div>
 
@@ -420,6 +549,7 @@
 
 
 <!-- Ниже только для свайпера код -->
+
   <div class="swiper swiper-3">
     <div class="swiper-wrapper swiper-wrapper-3">
       
@@ -493,80 +623,35 @@
           </div>
       </div>
 
+      
+
     </div>
 
     <div class="swiper-pagination"></div>
+    <div class="swiper__fade--3"></div>
 
   </div>
 </div>
   
-<!-- Ниже сайдбар -->
-    <div class="sidebar">
 
-    <div class="sidebar__icons">
-
-            <div class="sidebar__iconsCircle">
-                <img src="assets 3 (sidebar)/img/burger.svg" class="sidebarDeactivationButton">
-            </div>
-
-            <div class="sidebar__logo">
-                <img src="assets 3 (sidebar)/img/logo.svg">
-            </div>
-
-            <div class="sidebar__iconsCircle">
-                <img src="assets 3 (sidebar)/img/search.svg">
-            </div>
-
-      </div>
-
-      <div class="sidebar__menuAndContacts">
-            <div class="sidebar__sections sidebar__menu">
-                <span class="sidebar__menu__item">Ремонт техники</span>
-                <span class="sidebar__menu__item">Услуги и сервисы</span>
-                <span class="sidebar__menu__item">Корпоративным клиентам</span>
-                <span class="sidebar__menu__item">Продавцам техники</span>
-                <span class="sidebar__menu__item">Партнерам</span>
-                <span class="sidebar__menu__item">Производителям</span>
-                <span class="sidebar__menu__item">Наши сервисные центры</span>
-                <span class="sidebar__menu__item">Контакты</span>
-            </div>
-
-            <div class="sidebar__contacts">
-
-                <div class="sidebar__iconsBottom">
-
-                    <div class="sidebar__iconsCircle">
-                        <img src="assets 3 (sidebar)/img/phone.svg">
-                    </div>
-
-                    <div class="sidebar__iconsCircle">
-                        <img src="assets 3 (sidebar)/img/chat.svg">
-                    </div>
-
-                    <div class="sidebar__iconsCircle">
-                        <img src="assets 3 (sidebar)/img/profile.svg">
-                    </div>
-
-                </div>
-
-                <div class="sidebar__sections sidebar__contacts__info">
-                    <span>mail@cps.com</span>
-                    <span>8 800 890 8900</span>
-                </div>
-
-                <div class="sidebar__languages">
-                    <span class="lang">RU</span>
-                    <span class="lang">EN</span>
-                    <span class="lang">CH</span>
-                </div>
-
-            </div>
-
-          </div>
-
-        </div>
 
 </main>
+
+<footer>
+  <div>
+    <div class="main__text">Все цены указаны с учетом НДС.
+      Стоимость ремонта указана на единичную услугу.
+      Для получения коммерческого предложения на постоянное обслуживание, оставьте заявку.</div>
+      <div class="commercial">Получить коммерческое предложение</div>
+      <div class="footer__text">
+        <span>© 2025 CPS Разработано командой Манюнчика</span>
+        <span style="cursor: pointer;">Политика конфиденциальности</span>
+        <span>Информация, размещенная на данной странице, не является публичной офертой</span>
+      </div>
+  </div>
+</footer>
+
+</div>
 
 <script src="swiper-bundle.min.js"></script>
 <script src="sidebar.js"></script>
